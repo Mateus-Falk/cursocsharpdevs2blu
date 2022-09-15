@@ -1,0 +1,11 @@
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\bin\Debug\Jogo21-2.exe.config
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\bin\Debug\Jogo21-2.exe
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\bin\Debug\Jogo21-2.pdb
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\obj\Debug\Jogo21-2.csproj.AssemblyReference.cache
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\obj\Debug\Jogo21-2.csproj.SuggestedBindingRedirects.cache
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\obj\Debug\Jogo21_2.Form1.resources
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\obj\Debug\Jogo21_2.Properties.Resources.resources
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\obj\Debug\Jogo21-2.csproj.GenerateResource.cache
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\obj\Debug\Jogo21-2.csproj.CoreCompileInputs.cache
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\obj\Debug\Jogo21-2.exe
+C:\devs2blu\Aula6\Jogo21-2\SlcJogo21\src\Jogo21-2\obj\Debug\Jogo21-2.pdb

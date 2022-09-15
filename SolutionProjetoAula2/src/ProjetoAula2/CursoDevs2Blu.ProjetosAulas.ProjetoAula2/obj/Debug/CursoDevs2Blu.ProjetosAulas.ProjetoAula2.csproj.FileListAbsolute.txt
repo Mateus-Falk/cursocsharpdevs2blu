@@ -1,0 +1,8 @@
+C:\Users\Marcos\Source\Repos\SolutionProjetoAula2\src\ProjetoAula2\CursoDevs2Blu.ProjetosAulas.ProjetoAula2\obj\Debug\CursoDevs2Blu.ProjetosAulas.ProjetoAula2.csproj.AssemblyReference.cache
+C:\Users\Marcos\Source\Repos\SolutionProjetoAula2\src\ProjetoAula2\CursoDevs2Blu.ProjetosAulas.ProjetoAula2\obj\Debug\CursoDevs2Blu.ProjetosAulas.ProjetoAula2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Marcos\Source\Repos\SolutionProjetoAula2\src\ProjetoAula2\CursoDevs2Blu.ProjetosAulas.ProjetoAula2\obj\Debug\CursoDevs2Blu.ProjetosAulas.ProjetoAula2.csproj.CoreCompileInputs.cache
+C:\Users\Marcos\Source\Repos\SolutionProjetoAula2\src\ProjetoAula2\CursoDevs2Blu.ProjetosAulas.ProjetoAula2\bin\Debug\CursoDevs2Blu.ProjetosAulas.ProjetoAula2.exe.config
+C:\Users\Marcos\Source\Repos\SolutionProjetoAula2\src\ProjetoAula2\CursoDevs2Blu.ProjetosAulas.ProjetoAula2\bin\Debug\CursoDevs2Blu.ProjetosAulas.ProjetoAula2.exe
+C:\Users\Marcos\Source\Repos\SolutionProjetoAula2\src\ProjetoAula2\CursoDevs2Blu.ProjetosAulas.ProjetoAula2\bin\Debug\CursoDevs2Blu.ProjetosAulas.ProjetoAula2.pdb
+C:\Users\Marcos\Source\Repos\SolutionProjetoAula2\src\ProjetoAula2\CursoDevs2Blu.ProjetosAulas.ProjetoAula2\obj\Debug\CursoDevs2Blu.ProjetosAulas.ProjetoAula2.exe
+C:\Users\Marcos\Source\Repos\SolutionProjetoAula2\src\ProjetoAula2\CursoDevs2Blu.ProjetosAulas.ProjetoAula2\obj\Debug\CursoDevs2Blu.ProjetosAulas.ProjetoAula2.pdb
