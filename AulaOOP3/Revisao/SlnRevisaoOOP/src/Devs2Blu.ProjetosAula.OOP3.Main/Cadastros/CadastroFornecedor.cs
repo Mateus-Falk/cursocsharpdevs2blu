@@ -20,6 +20,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("- - - - - Cadastro de Fornecedor - - - - -");
                 Console.WriteLine("- - - - - 1 - Lista de Fornecedor - - - - -");
                 Console.WriteLine("- - - - - 2 - Cadastro de Fornecedor - - - - -");
@@ -32,6 +33,9 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                 {
                     case (int)MenuEnums.LISTAR:
                         ListarFornecedores();
+                        break;
+                    case (int)MenuEnums.CADASTRAR:
+                        CadastrarFornecedor();
                         break;
                     default:
                         break;
@@ -52,10 +56,14 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                 Console.WriteLine($"Tipo Fornecedor: {fornecedor.TipoFornecedor}");
                 Console.WriteLine("------------------------------------\n");
             }
+            Console.WriteLine("Precione \"ENTER\" para continuar");
+            Console.ReadLine();
         }
         public void CadastrarFornecedor()
         {
-
+            Random rd = new Random();
+            Fornecedor novoFornecedor = new Fornecedor(rd.Next(11,79), $"Fornecedor {rd.Next(11,97)}", $"1451{rd.Next(1549,7595)}212", "Pessoa Jurídica");
+            Program.Mock.ListaFornecedor.Add(novoFornecedor);
         }
         public void AlterarFornecedor()
         {

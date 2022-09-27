@@ -20,6 +20,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("- - - - - Cadastro de Médicos - - - - -");
                 Console.WriteLine("- - - - - 1 - Lista de Médicos - - - - -");
                 Console.WriteLine("- - - - - 2 - Cadastro de Médicos - - - - -");
@@ -33,6 +34,9 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                     case (int)MenuEnums.LISTAR:
                         ListarMedicos();
                         break;
+                    case (int)MenuEnums.CADASTRAR:
+                        CadastrarMedico();
+                        break;
                     default:
                         break;
                 }
@@ -43,7 +47,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         {
             Console.Clear();
 
-            foreach (Medico medico  in Program.Mock.ListaMedicos)
+            foreach (Medico medico in Program.Mock.ListaMedicos)
             {
                 Console.WriteLine("------------------------------------");
                 Console.WriteLine($"Medico: {medico.CodigoMedico}");
@@ -53,10 +57,17 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                 Console.WriteLine($"Especialidade: {medico.Especialidade}");
                 Console.WriteLine("------------------------------------\n");
             }
+            Console.WriteLine("Precione \"ENTER\" para continuar");
+            Console.ReadLine();
         }
         public void CadastrarMedico()
         {
+            string[] especialidade = { "Neurologista", "Ortologista", "Cardiologista", "Clínico Geral" };
 
+            Random rd = new Random();
+
+            Medico novoMedico = new Medico(rd.Next(11, 98), $"Médico {rd.Next(11, 45)}", $"{rd.Next(125, 749)}54575145", rd.Next(1, 50000), especialidade[rd.Next(0, especialidade.Length)]);
+            Program.Mock.ListaMedicos.Add(novoMedico);
         }
         public void AlterarMedico()
         {

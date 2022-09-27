@@ -22,42 +22,44 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main
             int opcao;
             Mock = new Mocks();
 
-            do { 
-            Console.WriteLine("- - - - - Sistema de Gerenciamento de Clínicas - - - - -");
-            Console.WriteLine("- - - - - 10- Cadastro de Pacientes - - - - -");
-            Console.WriteLine("- - - - - 20- Cadastro de Médicos - - - - -");
-            Console.WriteLine("- - - - - 30- Cadastro de Recepcionistas - - - - -");
-            Console.WriteLine("- - - - - 40- Cadastro de Fornecedores - - - - -");
-            Console.WriteLine("- - - - - 50- Agenda - - - - -");
-            Console.WriteLine("- - - - - 60- Prontuário - - - - -");
-            Console.WriteLine("- - - - - 70- Financeiro- - - - -");
-            Console.WriteLine("- - - - - - - - - - - - - - - - -");
-            Console.WriteLine("- - - - - 0 - Sair - - - - -");
-            Int32.TryParse(Console.ReadLine(), out opcao);
-            
-            switch (opcao)
+            do
             {
-                case (int)MenuEnums.CAD_PAC:
-                        ModuloCadastroPacientes = new CadastroPaciente();
-                        ModuloCadastroPacientes.MenuCadastro();
+                Console.Clear();
+                Console.WriteLine("- - - - - Sistema de Gerenciamento de Clínicas - - - - -");
+                Console.WriteLine("- - - - - 10- Cadastro de Pacientes - - - - -");
+                Console.WriteLine("- - - - - 20- Cadastro de Médicos - - - - -");
+                Console.WriteLine("- - - - - 30- Cadastro de Recepcionistas - - - - -");
+                Console.WriteLine("- - - - - 40- Cadastro de Fornecedores - - - - -");
+                Console.WriteLine("- - - - - 50- Agenda - - - - -");
+                Console.WriteLine("- - - - - 60- Prontuário - - - - -");
+                Console.WriteLine("- - - - - 70- Financeiro- - - - -");
+                Console.WriteLine("- - - - - - - - - - - - - - - - -");
+                Console.WriteLine("- - - - - 0 - Sair - - - - -");
+                Int32.TryParse(Console.ReadLine(), out opcao);
+
+                switch (opcao)
+                {
+                    case (int)MenuEnums.CAD_PAC:
+                        CadastroPaciente moduloCadastroPacientes = new CadastroPaciente();
+                        moduloCadastroPacientes.MenuCadastro();
                         break;
                     case (int)MenuEnums.CAD_MED:
-                        ModuloCadastroMedicos = new CadastroMedico();
-                        ModuloCadastroMedicos.MenuCadastro();
+                        CadastroMedico moduloCadastroMedicos = new CadastroMedico();
+                        moduloCadastroMedicos.MenuCadastro();
                         break;
                     case (int)MenuEnums.CAD_REC:
-                        ModuloCadastroRecepcionistas = new CadastroRecepcionista();
-                        ModuloCadastroRecepcionistas.MenuCadastro();
+                        CadastroRecepcionista moduloCadastroRecepcionistas = new CadastroRecepcionista();
+                        moduloCadastroRecepcionistas.MenuCadastro();
                         break;
                     case (int)MenuEnums.CAD_FOR:
-                        ModuloCadastroFornecedores = new CadastroFornecedor();
-                        ModuloCadastroFornecedores.MenuCadastro();
+                        CadastroFornecedor moduloCadastroFornecedores = new CadastroFornecedor();
+                        moduloCadastroFornecedores.MenuCadastro();
                         break;
                     default:
-                    break;
-            }
+                        break;
+                }
 
-        }while (!opcao.Equals((int)MenuEnums.SAIR));      
-        }   
+            } while (!opcao.Equals((int)MenuEnums.SAIR));
+        }
     }
 }

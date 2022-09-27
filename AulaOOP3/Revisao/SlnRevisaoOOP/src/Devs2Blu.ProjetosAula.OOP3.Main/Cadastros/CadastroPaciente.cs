@@ -22,6 +22,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             
             do 
             {
+                Console.Clear();
                 Console.WriteLine("- - - - - Cadastro de Pacientes - - - - -");
                 Console.WriteLine("- - - - - 1 - Lista de Pacientes - - - - -");
                 Console.WriteLine("- - - - - 2 - Cadastro de Pacientes - - - - -");
@@ -34,7 +35,10 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                 {
                     case (int)MenuEnums.LISTAR:
                         ListarPacientes();
-                        break;  
+                        break;
+                    case (int)MenuEnums.CADASTRAR:
+                        CadastrarPaciente();
+                        break;
                     default :
                         break;
                 }
@@ -55,9 +59,16 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                 Console.WriteLine($"Convenio: {paciente.Convenio}");
                 Console.WriteLine("------------------------------------\n");
             }
+            Console.WriteLine("Precione \"ENTER\" para continuar");
+            Console.ReadLine();
         }
+
         public void CadastrarPaciente()
         {
+            Random rd = new Random();
+            Paciente novoPaciente = new Paciente(rd.Next(11,45), $"Paciente {rd.Next(11, 45)}", $"32{rd.Next(10, 45)}6489141", "Unimed");
+            Program.Mock.ListaPacientes.Add(novoPaciente);
+
 
         }
         public void AlterarPaciente()

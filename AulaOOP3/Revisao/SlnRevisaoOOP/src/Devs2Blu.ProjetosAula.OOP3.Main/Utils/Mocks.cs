@@ -73,6 +73,5 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils
                 ListaFornecedor.Add(fornecedor);
             }
         }
-
     }
 }
