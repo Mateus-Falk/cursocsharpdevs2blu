@@ -64,6 +64,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             Console.WriteLine("- - - - - 1 - Lista de Pacientes - - - - -");
             Console.WriteLine("- - - - - 2 - Cadastro de Pacientes - - - - -");
             Console.WriteLine("- - - - - 3 - Alterar Pacientes - - - - -");
+            Console.WriteLine("- - - - - 4 - Excluir Pacientes - - - - -");
             Console.WriteLine("- - - - - - - - - - - - - - - - -");
             Console.WriteLine("- - - - - 0 - Sair - - - - -");
             Int32.TryParse(Console.ReadLine(), out opcao);

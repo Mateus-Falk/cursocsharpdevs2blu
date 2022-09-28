@@ -63,6 +63,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             Console.WriteLine("- - - - - 1 - Lista de Recepcionista - - - - -");
             Console.WriteLine("- - - - - 2 - Cadastro de Recepcionista - - - - -");
             Console.WriteLine("- - - - - 3 - Alterar Recepcionista - - - - -");
+            Console.WriteLine("- - - - - 4 - Excluir Recepcionista - - - - -");
             Console.WriteLine("- - - - - - - - - - - - - - - - -");
             Console.WriteLine("- - - - - 0 - Sair - - - - -");
             Int32.TryParse(Console.ReadLine(), out opcao);

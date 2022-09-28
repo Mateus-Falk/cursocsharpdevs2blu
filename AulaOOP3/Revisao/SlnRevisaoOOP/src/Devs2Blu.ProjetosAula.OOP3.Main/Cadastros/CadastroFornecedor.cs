@@ -65,6 +65,7 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
             Console.WriteLine("- - - - - 1 - Lista de Fornecedor - - - - -");
             Console.WriteLine("- - - - - 2 - Cadastro de Fornecedor - - - - -");
             Console.WriteLine("- - - - - 3 - Alterar Fornecedor - - - - -");
+            Console.WriteLine("- - - - - 4 - Excluir Fornecedor - - - - -");
             Console.WriteLine("- - - - - - - - - - - - - - - - -");
             Console.WriteLine("- - - - - 0 - Sair - - - - -");
             Int32.TryParse(Console.ReadLine(), out opcao);
