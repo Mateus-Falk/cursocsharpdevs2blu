@@ -6,47 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Devs2Blu.ProjetosAula.OOP3.Main.Utils;
 using Devs2Blu.ProjetosAula.OOP3.Models.Models;
+using Devs2Blu.ProjetosAula.OOP3.Main.Interfaces;
 
 namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 {
-    public class CadastroPaciente
+    public class CadastroPaciente : IMenuCadastro
     {
         public CadastroPaciente()
         {
                 
         }
-
-        public void MenuCadastro()
-        {
-            Int32 opcao;
-            
-            do 
-            {
-                Console.Clear();
-                Console.WriteLine("- - - - - Cadastro de Pacientes - - - - -");
-                Console.WriteLine("- - - - - 1 - Lista de Pacientes - - - - -");
-                Console.WriteLine("- - - - - 2 - Cadastro de Pacientes - - - - -");
-                Console.WriteLine("- - - - - 3 - Alterar Pacientes - - - - -");
-                Console.WriteLine("- - - - - - - - - - - - - - - - -");
-                Console.WriteLine("- - - - - 0 - Sair - - - - -");
-                Int32.TryParse(Console.ReadLine(), out opcao);
-
-                switch (opcao)
-                {
-                    case (int)MenuEnums.LISTAR:
-                        ListarPacientes();
-                        break;
-                    case (int)MenuEnums.CADASTRAR:
-                        CadastrarPaciente();
-                        break;
-                    default :
-                        break;
-                }
-
-            }while (!opcao.Equals((int)MenuEnums.SAIR));
-        }
-
-        public void ListarPacientes()
+        private void ListarPacientes()
         {
             Console.Clear();
 
@@ -59,25 +29,65 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                 Console.WriteLine($"Convenio: {paciente.Convenio}");
                 Console.WriteLine("------------------------------------\n");
             }
-            Console.WriteLine("Precione \"ENTER\" para continuar");
+            Console.WriteLine("Precione 'ENTER' para voltar");
             Console.ReadLine();
         }
-
-        public void CadastrarPaciente()
+        private void CadastrarPaciente(Paciente novoPaciente)
         {
-            Random rd = new Random();
-            Paciente novoPaciente = new Paciente(rd.Next(11,45), $"Paciente {rd.Next(11, 45)}", $"32{rd.Next(10, 45)}6489141", "Unimed");
+
+            novoPaciente = new Paciente();
+            Console.WriteLine("Informe o código");
+            novoPaciente.CodigoPaciente = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Informe o nome");
+            novoPaciente.Nome = Console.ReadLine();
+            Console.WriteLine("Informe o CPF");
+            novoPaciente.CGCCPF = Console.ReadLine();
+            Console.WriteLine("Informe o convenio");
+            novoPaciente.Convenio = Console.ReadLine();
             Program.Mock.ListaPacientes.Add(novoPaciente);
-
-
         }
-        public void AlterarPaciente()
+        private void AlterarPaciente(Paciente novoPaciente)
         {
 
         }
-        public void ExcluirPaciente()
+        private void ExcluirPaciente(Paciente novoPaciente)
         {
 
         }
+
+        #region facade
+        public Int32 MenuCadastro()
+        {
+            Int32 opcao;
+            Console.Clear();
+            Console.WriteLine("- - - - - Cadastro de Pacientes - - - - -");
+            Console.WriteLine("- - - - - 1 - Lista de Pacientes - - - - -");
+            Console.WriteLine("- - - - - 2 - Cadastro de Pacientes - - - - -");
+            Console.WriteLine("- - - - - 3 - Alterar Pacientes - - - - -");
+            Console.WriteLine("- - - - - - - - - - - - - - - - -");
+            Console.WriteLine("- - - - - 0 - Sair - - - - -");
+            Int32.TryParse(Console.ReadLine(), out opcao);
+            return opcao;
+        }
+        public void Listar()
+        {
+            ListarPacientes();
+        }
+        public void Cadastrar()
+        {
+            Paciente paciente = new Paciente();
+            CadastrarPaciente(paciente);
+        }
+        public void Alterar()
+        {
+            Paciente paciente = new Paciente();
+            AlterarPaciente(paciente);
+        }
+        public void Excluir()
+        {
+            Paciente paciente = new Paciente();
+            ExcluirPaciente(paciente);
+        }
+        #endregion    
     }
 }

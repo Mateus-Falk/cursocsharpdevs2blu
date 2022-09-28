@@ -1,4 +1,5 @@
 ﻿using Devs2Blu.ProjetosAula.OOP3.Main.Cadastros;
+using Devs2Blu.ProjetosAula.OOP3.Main.Interfaces;
 using Devs2Blu.ProjetosAula.OOP3.Main.Utils;
 using Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enuns;
 using Devs2Blu.ProjetosAula.OOP3.Models.Models;
@@ -19,45 +20,74 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main
         public static CadastroFornecedor ModuloCadastroFornecedores { get; set; }
         static void Main(string[] args)
         {
-            int opcao;
+            Int32 opcao = 0, opcaoMenuCadastros = 0;
             Mock = new Mocks();
+            IMenuCadastro menuCadastro;
 
             do
             {
-                Console.Clear();
-                Console.WriteLine("- - - - - Sistema de Gerenciamento de Clínicas - - - - -");
-                Console.WriteLine("- - - - - 10- Cadastro de Pacientes - - - - -");
-                Console.WriteLine("- - - - - 20- Cadastro de Médicos - - - - -");
-                Console.WriteLine("- - - - - 30- Cadastro de Recepcionistas - - - - -");
-                Console.WriteLine("- - - - - 40- Cadastro de Fornecedores - - - - -");
-                Console.WriteLine("- - - - - 50- Agenda - - - - -");
-                Console.WriteLine("- - - - - 60- Prontuário - - - - -");
-                Console.WriteLine("- - - - - 70- Financeiro- - - - -");
-                Console.WriteLine("- - - - - - - - - - - - - - - - -");
-                Console.WriteLine("- - - - - 0 - Sair - - - - -");
-                Int32.TryParse(Console.ReadLine(), out opcao);
+                if (opcaoMenuCadastros.Equals((int)MenuEnums.SAIR))
+                {
 
+                    Console.Clear();
+                    Console.WriteLine("- - - - - Sistema de Gerenciamento de Clínicas - - - - -");
+                    Console.WriteLine("- - - - - 10 - Cadastro de Pacientes - - - - -");
+                    Console.WriteLine("- - - - - 20 - Cadastro de Médicos - - - - -");
+                    Console.WriteLine("- - - - - 30 - Cadastro de Recepcionistas - - - - -");
+                    Console.WriteLine("- - - - - 40 - Cadastro de Fornecedores - - - - -");
+                    Console.WriteLine("- - - - - 50 - Agenda - - - - -");
+                    Console.WriteLine("- - - - - 60 - Prontuário - - - - -");
+                    Console.WriteLine("- - - - - 70 - Financeiro- - - - -");
+                    Console.WriteLine("- - - - - - - - - - - - - - - - -");
+                    Console.WriteLine("- - - - - 0 - Sair - - - - -");
+                    Int32.TryParse(Console.ReadLine(), out opcao);
+
+                }
                 switch (opcao)
                 {
                     case (int)MenuEnums.CAD_PAC:
-                        CadastroPaciente moduloCadastroPacientes = new CadastroPaciente();
-                        moduloCadastroPacientes.MenuCadastro();
+                        menuCadastro = new CadastroPaciente();
+                        opcaoMenuCadastros = menuCadastro.MenuCadastro();
                         break;
                     case (int)MenuEnums.CAD_MED:
-                        CadastroMedico moduloCadastroMedicos = new CadastroMedico();
-                        moduloCadastroMedicos.MenuCadastro();
+                        menuCadastro = new CadastroMedico();
+                        opcaoMenuCadastros = menuCadastro.MenuCadastro();
                         break;
-                    case (int)MenuEnums.CAD_REC:
+                    /*case (int)MenuEnums.CAD_REC:
                         CadastroRecepcionista moduloCadastroRecepcionistas = new CadastroRecepcionista();
                         moduloCadastroRecepcionistas.MenuCadastro();
-                        break;
-                    case (int)MenuEnums.CAD_FOR:
+                        break;*/
+                    /*case (int)MenuEnums.CAD_FOR:
                         CadastroFornecedor moduloCadastroFornecedores = new CadastroFornecedor();
                         moduloCadastroFornecedores.MenuCadastro();
-                        break;
+                        break;*/
                     default:
+                        menuCadastro = new CadastroPadrao();
+                        opcaoMenuCadastros = (int)MenuEnums.SAIR;
                         break;
                 }
+
+
+                switch (opcaoMenuCadastros)
+                {
+                    case (int)MenuEnums.LISTAR:
+                        menuCadastro.Listar();
+                        break;
+                    case (int)MenuEnums.CADASTRAR:
+                        menuCadastro.Cadastrar();
+                        break;
+                    case (int)MenuEnums.ALTERAR:
+                        menuCadastro.Alterar();
+                        break;
+                    case (int)MenuEnums.EXCLUIR:
+                        menuCadastro.Excluir();
+                        break;
+                    default:
+                        menuCadastro = new CadastroPadrao();
+                        opcaoMenuCadastros = (int)MenuEnums.SAIR;
+                        break;
+                }
+
 
             } while (!opcao.Equals((int)MenuEnums.SAIR));
         }

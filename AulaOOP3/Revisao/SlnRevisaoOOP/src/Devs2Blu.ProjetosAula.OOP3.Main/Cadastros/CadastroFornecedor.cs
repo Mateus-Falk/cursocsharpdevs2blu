@@ -1,4 +1,5 @@
-﻿using Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enuns;
+﻿using Devs2Blu.ProjetosAula.OOP3.Main.Interfaces;
+using Devs2Blu.ProjetosAula.OOP3.Main.Utils.Enuns;
 using Devs2Blu.ProjetosAula.OOP3.Models.Models;
 using System;
 using System.Collections.Generic;
@@ -8,41 +9,13 @@ using System.Threading.Tasks;
 
 namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 {
-    public class CadastroFornecedor
+    public class CadastroFornecedor : IMenuCadastro
     {
         public CadastroFornecedor()
         {
 
         }
-        public void MenuCadastro()
-        {
-            Int32 opcao;
-
-            do
-            {
-                Console.Clear();
-                Console.WriteLine("- - - - - Cadastro de Fornecedor - - - - -");
-                Console.WriteLine("- - - - - 1 - Lista de Fornecedor - - - - -");
-                Console.WriteLine("- - - - - 2 - Cadastro de Fornecedor - - - - -");
-                Console.WriteLine("- - - - - 3 - Alterar Fornecedor - - - - -");
-                Console.WriteLine("- - - - - - - - - - - - - - - - -");
-                Console.WriteLine("- - - - - 0 - Sair - - - - -");
-                Int32.TryParse(Console.ReadLine(), out opcao);
-
-                switch (opcao)
-                {
-                    case (int)MenuEnums.LISTAR:
-                        ListarFornecedores();
-                        break;
-                    case (int)MenuEnums.CADASTRAR:
-                        CadastrarFornecedor();
-                        break;
-                    default:
-                        break;
-                }
-
-            } while (!opcao.Equals((int)MenuEnums.SAIR));
-        }
+       
         public void ListarFornecedores()
         {
             Console.Clear();
@@ -56,23 +29,69 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
                 Console.WriteLine($"Tipo Fornecedor: {fornecedor.TipoFornecedor}");
                 Console.WriteLine("------------------------------------\n");
             }
-            Console.WriteLine("Precione \"ENTER\" para continuar");
+            Console.WriteLine("Precione 'ENTER' para voltar");
             Console.ReadLine();
         }
-        public void CadastrarFornecedor()
+        public void CadastrarFornecedor(Fornecedor novoFornecedor)
         {
-            Random rd = new Random();
-            Fornecedor novoFornecedor = new Fornecedor(rd.Next(11,79), $"Fornecedor {rd.Next(11,97)}", $"1451{rd.Next(1549,7595)}212", "Pessoa Jurídica");
+            novoFornecedor = new Fornecedor();
+            Console.WriteLine("Informe o código");
+            novoFornecedor.CodigoFornecedor = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Informe o nome");
+            novoFornecedor.Nome = Console.ReadLine();
+            Console.WriteLine("Informe o CNPJ");
+            novoFornecedor.CGCCPF = Console.ReadLine();
+            Console.WriteLine("Informe o tipo do fornecedor");
+            novoFornecedor.TipoFornecedor = Console.ReadLine();
             Program.Mock.ListaFornecedor.Add(novoFornecedor);
         }
-        public void AlterarFornecedor()
+        public void AlterarFornecedor(Fornecedor novoFornecedor)
         {
 
         }
-        public void ExcluirFornecedor()
+        public void ExcluirFornecedor(Fornecedor novoFornecedor)
         {
 
         }
 
+        
+        #region facede
+        public Int32 MenuCadastro()
+        {
+            Int32 opcao;
+
+            Console.Clear();
+            Console.WriteLine("- - - - - Cadastro de Fornecedor - - - - -");
+            Console.WriteLine("- - - - - 1 - Lista de Fornecedor - - - - -");
+            Console.WriteLine("- - - - - 2 - Cadastro de Fornecedor - - - - -");
+            Console.WriteLine("- - - - - 3 - Alterar Fornecedor - - - - -");
+            Console.WriteLine("- - - - - - - - - - - - - - - - -");
+            Console.WriteLine("- - - - - 0 - Sair - - - - -");
+            Int32.TryParse(Console.ReadLine(), out opcao);
+            return opcao;
+
+        }
+        public void Listar()
+        {
+            ListarFornecedores();
+        }
+        public void Cadastrar()
+        {
+            Fornecedor fornecedor = new Fornecedor();
+            CadastrarFornecedor(fornecedor);
+        }
+
+        public void Alterar()
+        {
+            Fornecedor fornecedor = new Fornecedor();
+            AlterarFornecedor(fornecedor);
+        }
+
+        public void Excluir()
+        {
+            Fornecedor fornecedor = new Fornecedor();
+            ExcluirFornecedor(fornecedor);
+        }
+        #endregion
     }
 }
