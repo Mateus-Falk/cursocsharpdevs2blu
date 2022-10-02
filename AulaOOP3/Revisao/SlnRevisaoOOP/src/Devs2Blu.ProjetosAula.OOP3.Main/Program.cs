@@ -14,10 +14,6 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main
     internal class Program
     {
         public static Mocks Mock { get; set; }
-        public static CadastroPaciente ModuloCadastroPacientes { get; set; }
-        public static CadastroMedico ModuloCadastroMedicos { get; set; }
-        public static CadastroRecepcionista ModuloCadastroRecepcionistas { get; set; }
-        public static CadastroFornecedor ModuloCadastroFornecedores { get; set; }
         static void Main(string[] args)
         {
             Int32 opcao = 0, opcaoMenuCadastros = 0;
@@ -83,7 +79,6 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main
                         menuCadastro.Excluir();
                         break;
                     default:
-                        menuCadastro = new CadastroPadrao();
                         opcaoMenuCadastros = (int)MenuEnums.SAIR;
                         break;
                 }

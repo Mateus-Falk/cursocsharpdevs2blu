@@ -67,9 +67,11 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Utils
         }
         public void CargaFornecedor()
         {
+            string[] tipoFornecedor = { "Remédios", "Comida", "Diversos" };
+            Random rd = new Random();
             for(int i = 0; i < 10; i++)
             {
-                Fornecedor fornecedor = new Fornecedor(i, $"Fornecedor {i+1}", $"{i}456{i}12{i}12{i}", "Pessoa Jurídica");
+                Fornecedor fornecedor = new Fornecedor(i, $"Fornecedor {i+1}", $"{i}456{i}12{i}12{i}", tipoFornecedor[rd.Next(0,tipoFornecedor.Length)]);
                 ListaFornecedor.Add(fornecedor);
             }
         }

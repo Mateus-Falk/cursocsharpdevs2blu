@@ -4,6 +4,8 @@ using Devs2Blu.ProjetosAula.OOP3.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Cache;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,24 +35,25 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         }
         public void CadastrarRecepcionista(Recepcionista novoRecepcionista)
         {
-            novoRecepcionista = new Recepcionista();
-            Console.WriteLine("Informe o código");
-            novoRecepcionista.CodigoRecepcionista = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Informe o nome");
-            novoRecepcionista.Nome = Console.ReadLine();
-            Console.WriteLine("Informe o CPF");
-            novoRecepcionista.CGCCPF = Console.ReadLine();
-            Console.WriteLine("Informe o setor");
-            novoRecepcionista.Setor = Console.ReadLine();
             Program.Mock.ListaRecepcionistas.Add(novoRecepcionista);
         }
-        public void AlterarRecepcionista(Recepcionista novoRecepcionista)
+        public void AlterarRecepcionista(Recepcionista recepcionista)
         {
-
+            var recp = Program.Mock.ListaRecepcionistas.Find(r => r.CodigoRecepcionista == recepcionista.CodigoRecepcionista);
+            int index = Program.Mock.ListaRecepcionistas.IndexOf(recp);
+            Program.Mock.ListaRecepcionistas[index] = recepcionista;
         }
-        public void ExcluirRecepcionista(Recepcionista novoRecepcionista)
+        public void ExcluirRecepcionista(Recepcionista recepcionista)
         {
-
+            Program.Mock.ListaRecepcionistas.Remove(recepcionista);
+        }
+        public void ListarRecepcionistaBycodeAndName()
+        {
+            foreach (Recepcionista recepcionista in Program.Mock.ListaRecepcionistas)
+            {
+                Console.WriteLine($"| Código: {recepcionista.CodigoRecepcionista} - Nome: {recepcionista.Nome} |");
+            }
+            Console.WriteLine("\n");
         }
         #region facade
         public Int32 MenuCadastro()
@@ -77,20 +80,95 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
 
         public void Cadastrar()
         {
+            Console.Clear();
             Recepcionista recepcionista = new Recepcionista();
+
+            Console.WriteLine("Informe o nome");
+            recepcionista.Nome = Console.ReadLine();
+
+            Console.WriteLine("Informe o CPF");
+            recepcionista.CGCCPF = Console.ReadLine();
+
+            Console.WriteLine("Informe o setor");
+            recepcionista.Setor = Console.ReadLine();
+
+            Random rd = new Random();
+            recepcionista.Codigo = rd.Next(1, 100) + DateTime.Now.Second;
+            recepcionista.CodigoRecepcionista = Int32.Parse($"{recepcionista.Codigo}{rd.Next(100, 999)}");
+
             CadastrarRecepcionista(recepcionista);
         }
 
         public void Alterar()
         {
-            Recepcionista recepcionista = new Recepcionista();
+            Console.Clear();
+            Recepcionista recepcionista;
+            int codigoRecepcionista;
+
+            Console.WriteLine("Informe o recepcionista que deseja alterar");
+            ListarRecepcionistaBycodeAndName();
+            Int32.TryParse(Console.ReadLine(),out codigoRecepcionista);
+
+            recepcionista = Program.Mock.ListaRecepcionistas.Find(r => r.CodigoRecepcionista == codigoRecepcionista);
+
+            string opcaoAlterar;
+            bool alterar = true;
+
+            do
+            {
+                Console.WriteLine($"| Recepcionista: {recepcionista.Codigo}/{recepcionista.CodigoRecepcionista} | Nome: {recepcionista.Nome} | CPF: {recepcionista.CGCCPF} | Setor: {recepcionista.Setor} |");
+                Console.WriteLine("\nQual campo deseja alterar");
+                Console.WriteLine("\n| 01 - Nome | 02 - CPF | 03 - Setor | 00 - Sair |");
+                opcaoAlterar = Console.ReadLine();
+
+                switch (opcaoAlterar)
+                {
+                    case "01":
+                        Console.WriteLine("Informe um novo nome");
+                        recepcionista.Nome = Console.ReadLine();
+                        break;
+                    case "02":
+                        Console.WriteLine("Informe um novo CPF");
+                        recepcionista.CGCCPF = Console.ReadLine();
+                        break;
+                    case "03":
+                        Console.WriteLine("Informe um novo setor");
+                        recepcionista.Setor = Console.ReadLine();
+                        break;
+                    default:
+                        alterar = false;
+                        break;
+                }
+                if(alterar)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Dado alterado com sucesso");
+                }
+            }while(alterar);
+
             AlterarRecepcionista(recepcionista);
         }
 
         public void Excluir()
         {
-            Recepcionista recepcionista = new Recepcionista();
-            ExcluirRecepcionista(recepcionista);
+            Console.Clear();
+            Recepcionista recepcionista;
+            int codigoRecepcionista;
+
+            Console.WriteLine("Informe o recepcionista que deseja excluir");
+            ListarRecepcionistaBycodeAndName();
+            Int32.TryParse(Console.ReadLine(), out codigoRecepcionista);
+            Console.Clear();
+            recepcionista = Program.Mock.ListaRecepcionistas.Find(r => r.CodigoRecepcionista == codigoRecepcionista);
+
+            Console.WriteLine($"\nTem certeza de que deseja excluir o recepcionista {recepcionista.CodigoRecepcionista}/{recepcionista.Nome}?");
+            Console.WriteLine("\n| 01 - Sim | Enter - Não |");
+            string opcao =Console.ReadLine();
+
+            if (opcao.Equals("01")){
+                ExcluirRecepcionista(recepcionista);
+                Console.WriteLine("Recepcionista excluido com sucesso");
+            }
         }
         #endregion
     }

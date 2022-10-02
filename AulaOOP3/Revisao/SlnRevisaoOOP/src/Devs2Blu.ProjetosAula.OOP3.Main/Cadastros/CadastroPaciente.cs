@@ -34,27 +34,28 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         }
         private void CadastrarPaciente(Paciente novoPaciente)
         {
-
-            novoPaciente = new Paciente();
-            Console.WriteLine("Informe o código");
-            novoPaciente.CodigoPaciente = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Informe o nome");
-            novoPaciente.Nome = Console.ReadLine();
-            Console.WriteLine("Informe o CPF");
-            novoPaciente.CGCCPF = Console.ReadLine();
-            Console.WriteLine("Informe o convenio");
-            novoPaciente.Convenio = Console.ReadLine();
             Program.Mock.ListaPacientes.Add(novoPaciente);
         }
-        private void AlterarPaciente(Paciente novoPaciente)
+        private void AlterarPaciente(Paciente paciente)
         {
+            var pact = Program.Mock.ListaPacientes.Find(p => p.CodigoPaciente == paciente.CodigoPaciente);
+            int index = Program.Mock.ListaPacientes.IndexOf(pact);
+            Program.Mock.ListaPacientes[index] = paciente;
 
         }
-        private void ExcluirPaciente(Paciente novoPaciente)
+        private void ExcluirPaciente(Paciente paciente)
         {
-
+            Program.Mock.ListaPacientes.Remove(paciente);
         }
+        private void ListarPacienteByCodeAndName()
+        {
+            foreach (Paciente paciente in Program.Mock.ListaPacientes)
+            {
 
+                Console.WriteLine($"| Código: {paciente.CodigoPaciente} - Nome: {paciente.Nome} |");
+            }
+            Console.WriteLine("\n");
+        }
         #region facade
         public Int32 MenuCadastro()
         {
@@ -76,18 +77,97 @@ namespace Devs2Blu.ProjetosAula.OOP3.Main.Cadastros
         }
         public void Cadastrar()
         {
+            Console.Clear();
             Paciente paciente = new Paciente();
+            Console.WriteLine("Informe o nome do Paciente");
+            paciente.Nome = Console.ReadLine();
+
+            Console.WriteLine("Informe o CPF");
+            paciente.CGCCPF = Console.ReadLine();
+
+            Console.WriteLine("Informe o Convênio do Paciente");
+            paciente.Convenio = Console.ReadLine();
+
+            Random rd = new Random();
+            paciente.Codigo = rd.Next(1, 100) + DateTime.Now.Second;
+            paciente.CodigoPaciente = Int32.Parse($"{paciente.Codigo}{rd.Next(100, 900)}");
+
             CadastrarPaciente(paciente);
         }
         public void Alterar()
         {
-            Paciente paciente = new Paciente();
+            Console.Clear();
+            Paciente paciente;
+            int codigoPaciente;
+
+            Console.WriteLine("Informe o paciente que deseja alterar:\n");
+            ListarPacienteByCodeAndName();
+
+            Int32.TryParse(Console.ReadLine(), out  codigoPaciente);
+
+            paciente = Program.Mock.ListaPacientes.Find(p => p.CodigoPaciente == codigoPaciente);
+
+            string opcaoAlterar;
+            bool alterar = true;
+
+            do
+            {
+                Console.WriteLine($"Paciente: {paciente.Codigo}/{paciente.CodigoPaciente} | Nome: {paciente.Nome} | CPF: {paciente.CGCCPF} | Convênio: {paciente.Convenio}");
+                Console.WriteLine("Qual campo deseja alterar");            
+                Console.WriteLine("|01 - Nome | 02 - CPF | 03 Convênio | 00 Sair |");
+                opcaoAlterar = Console.ReadLine();
+
+                switch (opcaoAlterar)
+                {
+                    case "01":
+                        Console.WriteLine("Informe um novo nome: ");
+                        paciente.Nome = Console.ReadLine();
+                        break;
+                    case "02":
+                        Console.WriteLine("Informe um novo CPF: ");
+                        paciente.CGCCPF = Console.ReadLine();
+                        break;
+                    case "03":
+                        Console.WriteLine("Informe um novo convênio: ");
+                        paciente.Convenio = Console.ReadLine();
+                        break;
+                    default:
+                        alterar = false;
+                        break;
+                }
+                if (alterar)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Dado alterado com sucesso");
+                }
+            }while (alterar);
+
             AlterarPaciente(paciente);
         }
         public void Excluir()
         {
-            Paciente paciente = new Paciente();
-            ExcluirPaciente(paciente);
+            Console.Clear();
+            Paciente paciente;
+            int codigoPaciente;
+
+            Console.WriteLine("Informe o paciente que deseja excluir");
+            ListarPacienteByCodeAndName();
+
+            Int32.TryParse(Console.ReadLine(), out codigoPaciente);
+            Console.Clear();
+            paciente = Program.Mock.ListaPacientes.Find(p => p.CodigoPaciente == codigoPaciente);
+
+            Console.WriteLine($"\nTem certeza de que deseja excluir o paciente {paciente.CodigoPaciente}/{paciente.Nome}?");
+            Console.WriteLine("\n| 01 - Sim | Enter - Não|");
+
+            String opcao = Console.ReadLine();
+
+            if (opcao == "01")
+            {
+                ExcluirPaciente(paciente);
+                Console.WriteLine("Paciente excluido com sucesso");
+            }
+            
         }
         #endregion    
     }
