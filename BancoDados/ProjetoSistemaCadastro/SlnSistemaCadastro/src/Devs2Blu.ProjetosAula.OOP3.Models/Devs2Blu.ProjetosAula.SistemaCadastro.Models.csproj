@@ -45,6 +45,7 @@
     <Compile Include="Models\Agenda.cs" />
     <Compile Include="Models\AgendaPaciente.cs" />
     <Compile Include="Models\ContaPaciente.cs" />
+    <Compile Include="Models\Convenio.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Faturamento.cs" />
     <Compile Include="Enum\FlStatus.cs" />
