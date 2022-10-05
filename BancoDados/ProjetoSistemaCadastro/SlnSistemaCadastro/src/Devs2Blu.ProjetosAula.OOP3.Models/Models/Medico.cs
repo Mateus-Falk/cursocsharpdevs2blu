@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Devs2Blu.ProjetosAula.SistemaCadastro.Models.Models
 {
-    public class Medico: Pessoa
+    public class Medico
     {
         public Int32 Id { get; set; }
         public Int32 CRM { get; set; }

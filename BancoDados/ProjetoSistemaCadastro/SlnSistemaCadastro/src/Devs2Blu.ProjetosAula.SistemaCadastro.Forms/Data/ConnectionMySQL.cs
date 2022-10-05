@@ -21,17 +21,17 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
             Server = "localhost";
             DataBase = "sistemacadastro";
             User = "root";
-            Password = "MinguiPetaBidu#123Dogs";
+            Password = "MinguiPetaBidu#3Dogs";
             ConnectionString = $"Persist Security Info=False;server={Server};database={DataBase};uid={User};server={Server};database={DataBase};uid={User};pwd='{Password}'";
             
-            var conn = new MySqlConnection($"");
+            var conn = new MySqlConnection(ConnectionString);
             try
             {
                 conn.Open();
             }
             catch(MySqlException myex)
             {
-                MessageBox.Show(myex.Message, "Erro ao Conectar");
+                MessageBox.Show(myex.Message, "Erro ao Conectar",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 throw;
             }
 
