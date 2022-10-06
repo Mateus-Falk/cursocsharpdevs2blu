@@ -14,7 +14,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Models.Models
 
         public Recepcionista()
         {
-            TipoPessoa = TipoPessoa.PF;
+            //TipoPessoa = TipoPessoa.PF;
         }
   
     }

@@ -23,20 +23,19 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
             User = "root";
             Password = "MinguiPetaBidu#3Dogs";
             ConnectionString = $"Persist Security Info=False;server={Server};database={DataBase};uid={User};server={Server};database={DataBase};uid={User};pwd='{Password}'";
-            
+
             var conn = new MySqlConnection(ConnectionString);
             try
             {
+                
                 conn.Open();
             }
-            catch(MySqlException myex)
+            catch(MySqlException myEx)
             {
-                MessageBox.Show(myex.Message, "Erro ao Conectar",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(myEx.Message, "Erro ao Conectar",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 throw;
             }
-
             return conn;
         }
-
-    }
+    }   
 }

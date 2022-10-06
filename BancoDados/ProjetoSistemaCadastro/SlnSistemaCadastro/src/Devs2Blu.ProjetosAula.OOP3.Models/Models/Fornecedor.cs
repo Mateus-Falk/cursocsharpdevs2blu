@@ -14,7 +14,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Models.Models
 
         public Fornecedor()
         {
-            TipoPessoa = TipoPessoa.PJ;
+           // TipoPessoa = TipoPessoa.PJ;
         }
 
     }

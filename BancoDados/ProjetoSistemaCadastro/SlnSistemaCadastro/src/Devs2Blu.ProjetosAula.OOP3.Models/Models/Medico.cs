@@ -15,7 +15,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Models.Models
 
         public Medico()
         {
-            TipoPessoa = TipoPessoa.PF;
+            //TipoPessoa = TipoPessoa.PF;
         }
     }
 }
