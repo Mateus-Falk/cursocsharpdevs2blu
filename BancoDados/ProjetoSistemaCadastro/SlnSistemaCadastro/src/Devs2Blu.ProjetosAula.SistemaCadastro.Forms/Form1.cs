@@ -48,7 +48,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
                 return false;
             if (mskCEP.Text.Equals(""))
                 return false;
-            if (txtUF.Text.Equals(""))
+            if (cboUF.Text.Equals(""))
                 return false;
             if (txtCidade.Text.Equals(""))
                 return false;
@@ -108,7 +108,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
                 paciente.Endereco.Numero = Int32.Parse(txtNumero.Text);
                 paciente.Endereco.Bairro = txtBairro.Text;
                 paciente.Endereco.Cidade = txtCidade.Text;
-                paciente.Endereco.UF = txtUF.Text;
+                paciente.Endereco.UF = cboUF.Text;
                 
 
                 var pacienteResult = PacienteRepository.Save(paciente);
@@ -156,7 +156,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
                 paciente.Endereco.Numero = Int32.Parse(txtNumero.Text);
                 paciente.Endereco.Bairro = txtBairro.Text;
                 paciente.Endereco.Cidade = txtCidade.Text;
-                paciente.Endereco.UF = txtUF.Text;
+                paciente.Endereco.UF = cboUF.Text;
 
                 var pacienteResult = PacienteRepository.Update(paciente);
                 RepositoryEndereco.UpdateEndereco(paciente);
@@ -174,7 +174,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
             txtCGCCPF.Text = "";
             mskCEP.Text = "";
             txtCidade.Text = "";
-            txtUF.Text = "";
+            cboUF.Text = "";
             txtBairro.Text = "";
             txtRua.Text = "";
             txtNumero.Text = "";
@@ -194,7 +194,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
             txtNumero.Text = gridPaciente.CurrentRow.Cells[9].Value.ToString();
             txtBairro.Text = gridPaciente.CurrentRow.Cells[10].Value.ToString();
             txtCidade.Text = gridPaciente.CurrentRow.Cells[11].Value.ToString();
-            txtUF.Text = gridPaciente.CurrentRow.Cells[12].Value.ToString();
+            cboUF.Text = gridPaciente.CurrentRow.Cells[12].Value.ToString();
         }
         #endregion
     }

@@ -33,7 +33,6 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.gbEnderecoCadastro = new System.Windows.Forms.GroupBox();
-            this.txtUF = new System.Windows.Forms.TextBox();
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -64,6 +63,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cboUF = new System.Windows.Forms.ComboBox();
             this.gbFormCadastro.SuspendLayout();
             this.gbEnderecoCadastro.SuspendLayout();
             this.gbTipoPessoa.SuspendLayout();
@@ -124,7 +124,7 @@
             // gbEnderecoCadastro
             // 
             this.gbEnderecoCadastro.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.gbEnderecoCadastro.Controls.Add(this.txtUF);
+            this.gbEnderecoCadastro.Controls.Add(this.cboUF);
             this.gbEnderecoCadastro.Controls.Add(this.mskCEP);
             this.gbEnderecoCadastro.Controls.Add(this.txtRua);
             this.gbEnderecoCadastro.Controls.Add(this.txtNumero);
@@ -142,13 +142,6 @@
             this.gbEnderecoCadastro.TabIndex = 11;
             this.gbEnderecoCadastro.TabStop = false;
             this.gbEnderecoCadastro.Text = "Endereço/Contato";
-            // 
-            // txtUF
-            // 
-            this.txtUF.Location = new System.Drawing.Point(129, 25);
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(47, 20);
-            this.txtUF.TabIndex = 20;
             // 
             // mskCEP
             // 
@@ -445,6 +438,42 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
+            // cboUF
+            // 
+            this.cboUF.FormattingEnabled = true;
+            this.cboUF.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.cboUF.Location = new System.Drawing.Point(127, 26);
+            this.cboUF.Name = "cboUF";
+            this.cboUF.Size = new System.Drawing.Size(42, 21);
+            this.cboUF.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,7 +540,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.MaskedTextBox txtCGCCPF;
-        private System.Windows.Forms.TextBox txtUF;
+        private System.Windows.Forms.ComboBox cboUF;
     }
 }
 
