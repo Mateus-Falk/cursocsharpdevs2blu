@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Data\ConnectionMySQL.cs" />
     <Compile Include="Data\ConvenioRepository.cs" />
+    <Compile Include="Data\PacienteRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,6 +83,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\btnIconSalvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\btnIconExcluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\btnIconInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Devs2Blu.ProjetosAula.OOP3.Models\Devs2Blu.ProjetosAula.SistemaCadastro.Models.csproj">
+      <Project>{E2560E53-6279-4004-AE3A-FB27128837D1}</Project>
+      <Name>Devs2Blu.ProjetosAula.SistemaCadastro.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\update.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

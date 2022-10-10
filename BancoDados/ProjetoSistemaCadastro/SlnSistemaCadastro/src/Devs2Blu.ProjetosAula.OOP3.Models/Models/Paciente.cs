@@ -16,11 +16,13 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Models.Models
         public String PacienteRisco { get; set; }
         public FlStatus Status{ get; set; }
         public Int32 FlObito { get; set; }
+        public Endereco Endereco { get; set; }
 
         public Paciente() 
         {
             Pessoa = new Pessoa();
             Convenio = new Convenio();
+            Endereco = new Endereco();
             Status = FlStatus.A;
             FlObito = 0;
 
