@@ -96,9 +96,9 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
 
             try
             {
-                ExcluiPessoa(paciente, conn);
                 ExcluiPaciente(paciente, conn);
                 ExcluiEndereco(paciente, conn);
+                ExcluiPessoa(paciente, conn);
                 return 0;
             }
             catch (MySqlException myExc)
@@ -113,7 +113,6 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
             {
                 MySqlCommand cmd = new MySqlCommand(SQL_DELETE_PACIENTE, conn);
                 cmd.Parameters.Add("@id_pessoa", MySqlDbType.Int32).Value = paciente.Pessoa.Id;
-                cmd.Parameters.Remove(paciente);
 
                 cmd.ExecuteNonQuery();
             }
@@ -129,8 +128,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
             {
                 MySqlCommand cmd = new MySqlCommand(SQL_DELETE_PESSOA, conn);
                 cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = paciente.Pessoa.Id;
-                cmd.Parameters.Remove(paciente);
-
+               
                 cmd.ExecuteNonQuery();
             }
             catch (Exception myExc)
@@ -145,7 +143,6 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
             {
                 MySqlCommand cmd = new MySqlCommand(SQL_DELETE_ENDERECO, conn);
                 cmd.Parameters.Add("@id_pessoa", MySqlDbType.Int32).Value = paciente.Pessoa.Id;
-                cmd.Parameters.Remove(paciente);
 
                 cmd.ExecuteNonQuery();
             }
