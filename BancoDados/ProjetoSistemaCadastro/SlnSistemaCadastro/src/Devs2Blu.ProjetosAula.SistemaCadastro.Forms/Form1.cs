@@ -18,6 +18,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
         public MySqlConnection Conn { get; set; }
         public ConvenioRepository ConvenioRepository = new ConvenioRepository();
         public PacienteRepository PacienteRepository = new PacienteRepository();
+        public RepositoryEndereco RepositoryEndereco = new RepositoryEndereco();
         public Form1()
         {
             InitializeComponent();
@@ -111,6 +112,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
                 
 
                 var pacienteResult = PacienteRepository.Save(paciente);
+                RepositoryEndereco.SaveEndereco(paciente);
                 if (pacienteResult.Pessoa.Id > 0)
                 {
                     MessageBox.Show($"Pessoa {paciente.Pessoa.Id} - {paciente.Pessoa.Nome} salva com sucesso!", "Adicionar Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -157,6 +159,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
                 paciente.Endereco.UF = txtUF.Text;
 
                 var pacienteResult = PacienteRepository.Update(paciente);
+                RepositoryEndereco.UpdateEndereco(paciente);
                 if (pacienteResult.Pessoa.Id > 0)
                 {
                     MessageBox.Show($"Pessoa {paciente.Pessoa.Id} - {paciente.Pessoa.Nome} Atualizada com sucesso!", "Atalizar Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -175,6 +178,23 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
             txtBairro.Text = "";
             txtRua.Text = "";
             txtNumero.Text = "";
+        } 
+
+        private void gridPaciente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Paciente paciente = new Paciente();
+
+            paciente.Pessoa.Id = int.Parse(gridPaciente.CurrentRow.Cells[0].Value.ToString());
+
+            txtNome.Text = gridPaciente.CurrentRow.Cells[1].Value.ToString();
+            txtCGCCPF.Text = gridPaciente.CurrentRow.Cells[2].Value.ToString();
+            cboConvenio.Text = gridPaciente.CurrentRow.Cells[6].Value.ToString();
+            mskCEP.Text = gridPaciente.CurrentRow.Cells[7].Value.ToString();
+            txtRua.Text = gridPaciente.CurrentRow.Cells[8].Value.ToString();
+            txtNumero.Text = gridPaciente.CurrentRow.Cells[9].Value.ToString();
+            txtBairro.Text = gridPaciente.CurrentRow.Cells[10].Value.ToString();
+            txtCidade.Text = gridPaciente.CurrentRow.Cells[11].Value.ToString();
+            txtUF.Text = gridPaciente.CurrentRow.Cells[12].Value.ToString();
         }
         #endregion
     }

@@ -33,6 +33,7 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.gbEnderecoCadastro = new System.Windows.Forms.GroupBox();
+            this.txtUF = new System.Windows.Forms.TextBox();
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -55,15 +56,14 @@
             this.gbConteudo = new System.Windows.Forms.GroupBox();
             this.gridPaciente = new System.Windows.Forms.DataGridView();
             this.panelControles = new System.Windows.Forms.Panel();
+            this.BtnInfo = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BtnInfo = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtUF = new System.Windows.Forms.TextBox();
             this.gbFormCadastro.SuspendLayout();
             this.gbEnderecoCadastro.SuspendLayout();
             this.gbTipoPessoa.SuspendLayout();
@@ -77,7 +77,6 @@
             // 
             this.gbFormCadastro.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbFormCadastro.Controls.Add(this.txtCGCCPF);
-            this.gbFormCadastro.Controls.Add(this.btnLimpar);
             this.gbFormCadastro.Controls.Add(this.txtNome);
             this.gbFormCadastro.Controls.Add(this.gbEnderecoCadastro);
             this.gbFormCadastro.Controls.Add(this.label4);
@@ -88,7 +87,7 @@
             this.gbFormCadastro.Controls.Add(this.cboConvenio);
             this.gbFormCadastro.Location = new System.Drawing.Point(12, 39);
             this.gbFormCadastro.Name = "gbFormCadastro";
-            this.gbFormCadastro.Size = new System.Drawing.Size(392, 296);
+            this.gbFormCadastro.Size = new System.Drawing.Size(733, 176);
             this.gbFormCadastro.TabIndex = 2;
             this.gbFormCadastro.TabStop = false;
             this.gbFormCadastro.Text = "Formulário de cadastro";
@@ -107,7 +106,7 @@
             this.btnLimpar.BackColor = System.Drawing.Color.Gold;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(7, 252);
+            this.btnLimpar.Location = new System.Drawing.Point(106, 93);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 31);
             this.btnLimpar.TabIndex = 15;
@@ -137,12 +136,19 @@
             this.gbEnderecoCadastro.Controls.Add(this.label6);
             this.gbEnderecoCadastro.Controls.Add(this.label5);
             this.gbEnderecoCadastro.Controls.Add(this.label3);
-            this.gbEnderecoCadastro.Location = new System.Drawing.Point(7, 135);
+            this.gbEnderecoCadastro.Location = new System.Drawing.Point(374, 19);
             this.gbEnderecoCadastro.Name = "gbEnderecoCadastro";
             this.gbEnderecoCadastro.Size = new System.Drawing.Size(353, 100);
             this.gbEnderecoCadastro.TabIndex = 11;
             this.gbEnderecoCadastro.TabStop = false;
             this.gbEnderecoCadastro.Text = "Endereço/Contato";
+            // 
+            // txtUF
+            // 
+            this.txtUF.Location = new System.Drawing.Point(129, 25);
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(47, 20);
+            this.txtUF.TabIndex = 20;
             // 
             // mskCEP
             // 
@@ -327,9 +333,9 @@
             // gbConteudo
             // 
             this.gbConteudo.Controls.Add(this.gridPaciente);
-            this.gbConteudo.Location = new System.Drawing.Point(419, 39);
+            this.gbConteudo.Location = new System.Drawing.Point(17, 231);
             this.gbConteudo.Name = "gbConteudo";
-            this.gbConteudo.Size = new System.Drawing.Size(353, 296);
+            this.gbConteudo.Size = new System.Drawing.Size(1034, 263);
             this.gbConteudo.TabIndex = 3;
             this.gbConteudo.TabStop = false;
             // 
@@ -338,22 +344,66 @@
             this.gridPaciente.AllowUserToAddRows = false;
             this.gridPaciente.AllowUserToOrderColumns = true;
             this.gridPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPaciente.Location = new System.Drawing.Point(6, 20);
+            this.gridPaciente.Location = new System.Drawing.Point(7, 19);
             this.gridPaciente.Name = "gridPaciente";
             this.gridPaciente.ReadOnly = true;
-            this.gridPaciente.Size = new System.Drawing.Size(337, 263);
+            this.gridPaciente.Size = new System.Drawing.Size(1021, 238);
             this.gridPaciente.TabIndex = 0;
+            this.gridPaciente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPaciente_CellContentClick);
             // 
             // panelControles
             // 
             this.panelControles.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panelControles.Controls.Add(this.BtnInfo);
+            this.panelControles.Controls.Add(this.btnLimpar);
             this.panelControles.Controls.Add(this.btnExcluir);
             this.panelControles.Controls.Add(this.btnSalvar);
-            this.panelControles.Location = new System.Drawing.Point(12, 354);
+            this.panelControles.Location = new System.Drawing.Point(756, 42);
             this.panelControles.Name = "panelControles";
-            this.panelControles.Size = new System.Drawing.Size(760, 87);
+            this.panelControles.Size = new System.Drawing.Size(289, 173);
             this.panelControles.TabIndex = 4;
+            // 
+            // BtnInfo
+            // 
+            this.BtnInfo.BackColor = System.Drawing.Color.Blue;
+            this.BtnInfo.BackgroundImage = global::Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Properties.Resources.update;
+            this.BtnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInfo.ForeColor = System.Drawing.Color.White;
+            this.BtnInfo.Location = new System.Drawing.Point(16, 90);
+            this.BtnInfo.Name = "BtnInfo";
+            this.BtnInfo.Size = new System.Drawing.Size(79, 58);
+            this.BtnInfo.TabIndex = 15;
+            this.BtnInfo.UseVisualStyleBackColor = false;
+            this.BtnInfo.Click += new System.EventHandler(this.BtnInfo_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.Red;
+            this.btnExcluir.BackgroundImage = global::Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Properties.Resources.btnIconExcluir;
+            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(106, 16);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 58);
+            this.btnExcluir.TabIndex = 0;
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSalvar.BackgroundImage = global::Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Properties.Resources.btnIconSalvar;
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(16, 16);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 58);
+            this.btnSalvar.TabIndex = 14;
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // menuStrip1
             // 
@@ -363,7 +413,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1062, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -395,62 +445,13 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // BtnInfo
-            // 
-            this.BtnInfo.BackColor = System.Drawing.Color.Blue;
-            this.BtnInfo.BackgroundImage = global::Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Properties.Resources.update;
-            this.BtnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInfo.ForeColor = System.Drawing.Color.White;
-            this.BtnInfo.Location = new System.Drawing.Point(97, 16);
-            this.BtnInfo.Name = "BtnInfo";
-            this.BtnInfo.Size = new System.Drawing.Size(79, 58);
-            this.BtnInfo.TabIndex = 15;
-            this.BtnInfo.UseVisualStyleBackColor = false;
-            this.BtnInfo.Click += new System.EventHandler(this.BtnInfo_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.Color.Red;
-            this.btnExcluir.BackgroundImage = global::Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Properties.Resources.btnIconExcluir;
-            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(182, 16);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 58);
-            this.btnExcluir.TabIndex = 0;
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnSalvar.BackgroundImage = global::Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Properties.Resources.btnIconSalvar;
-            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(16, 16);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 58);
-            this.btnSalvar.TabIndex = 14;
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // txtUF
-            // 
-            this.txtUF.Location = new System.Drawing.Point(129, 25);
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(47, 20);
-            this.txtUF.TabIndex = 20;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelControles);
+            this.ClientSize = new System.Drawing.Size(1062, 557);
             this.Controls.Add(this.gbConteudo);
+            this.Controls.Add(this.panelControles);
             this.Controls.Add(this.gbFormCadastro);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

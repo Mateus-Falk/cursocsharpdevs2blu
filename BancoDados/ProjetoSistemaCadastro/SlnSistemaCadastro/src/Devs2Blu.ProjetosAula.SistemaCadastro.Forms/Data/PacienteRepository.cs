@@ -10,7 +10,9 @@ using System.Windows.Forms;
 namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
 {
     public class PacienteRepository
+
     {
+        public RepositoryEndereco RepositoryEndereco = new RepositoryEndereco();
         #region Inserts
         public Paciente Save(Paciente paciente)
         {
@@ -18,10 +20,8 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
 
             try
             {
-
                 paciente.Pessoa.Id = SavePessoa(paciente, conn);
                 SavePaciente(paciente, conn);
-                SaveEndereco(paciente, conn);
 
                 return paciente;
             }
@@ -67,28 +67,8 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
                 throw;
             }
         }
-        private void SaveEndereco(Paciente paciente, MySqlConnection conn)
-        {
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand(SQL_INSERT_ENDERECO, conn);
-                cmd.Parameters.Add("@idPessoa", MySqlDbType.Int32).Value = paciente.Pessoa.Id;
-                cmd.Parameters.Add("@CEP", MySqlDbType.VarChar, 15).Value = paciente.Endereco.CEP;
-                cmd.Parameters.Add("@rua", MySqlDbType.VarChar, 45).Value = paciente.Endereco.Rua;
-                cmd.Parameters.Add("@numero", MySqlDbType.Int32).Value = paciente.Endereco.Numero;
-                cmd.Parameters.Add("@bairro", MySqlDbType.VarChar, 45).Value = paciente.Endereco.Bairro;
-                cmd.Parameters.Add("@cidade", MySqlDbType.VarChar, 45).Value = paciente.Endereco.Cidade;
-                cmd.Parameters.Add("@uf", MySqlDbType.VarChar, 2).Value = paciente.Endereco.UF;
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception myExc)
-            {
-                MessageBox.Show(myExc.Message, "Erro de MySQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
-            }
-        }
         #endregion
+
         #region Deletes
         public int Exclui(Paciente paciente)
         {
@@ -97,7 +77,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
             try
             {
                 ExcluiPaciente(paciente, conn);
-                ExcluiEndereco(paciente, conn);
+                RepositoryEndereco.ExcluiEndereco(paciente);
                 ExcluiPessoa(paciente, conn);
                 return 0;
             }
@@ -137,21 +117,6 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
                 throw;
             }
         }
-        private void ExcluiEndereco(Paciente paciente, MySqlConnection conn)
-        {
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand(SQL_DELETE_ENDERECO, conn);
-                cmd.Parameters.Add("@id_pessoa", MySqlDbType.Int32).Value = paciente.Pessoa.Id;
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception myExc)
-            {
-                MessageBox.Show(myExc.Message, "Erro de MySQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
-            }
-        }
         #endregion
 
         #region Updates
@@ -163,7 +128,6 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
             {
                 UpdatePessoa(paciente, conn);
                 UpdatePaciente(paciente, conn);
-                UpdateEndereco(paciente, conn);
                 return paciente;
             }
             catch (MySqlException myExc)
@@ -208,27 +172,6 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
                 throw;
             }
         }
-        private void UpdateEndereco(Paciente paciente, MySqlConnection conn)
-        {
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand(SQL_UPDATE_ENDERECO, conn);
-                cmd.Parameters.Add("@id_pessoa", MySqlDbType.Int32).Value = paciente.Pessoa.Id;
-                cmd.Parameters.Add("@CEP", MySqlDbType.VarChar, 15).Value = paciente.Endereco.CEP;
-                cmd.Parameters.Add("@rua", MySqlDbType.VarChar, 45).Value = paciente.Endereco.Rua;
-                cmd.Parameters.Add("@numero", MySqlDbType.Int32).Value = paciente.Endereco.Numero;
-                cmd.Parameters.Add("@bairro", MySqlDbType.VarChar, 45).Value = paciente.Endereco.Bairro;
-                cmd.Parameters.Add("@cidade", MySqlDbType.VarChar, 45).Value = paciente.Endereco.Cidade;
-                cmd.Parameters.Add("@uf", MySqlDbType.VarChar, 2).Value = paciente.Endereco.UF;
-
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception myExc)
-            {
-                MessageBox.Show(myExc.Message, "Erro de MySQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
-            }
-        }
         #endregion
 
         internal MySqlDataReader GetPessoas()
@@ -248,6 +191,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
                 throw;
             }
         }
+       
         #region SQLS
         private const String SQL_INSERT_PESSOA = @"INSERT INTO pessoa 
 (nome,
@@ -259,22 +203,6 @@ VALUES
 @cgccpf,
 @tipopessoa,
 'A')";
-        private const String SQL_INSERT_ENDERECO = @"INSERT INTO endereco 
-(id_pessoa,
-CEP,
-rua,
-numero,
-bairro,
-cidade,
-uf)
-VALUES 
-(@idPessoa,
-@CEP,
-@rua,
-@numero,
-@bairro,
-@cidade,
-@uf)";
         private const String SQL_INSERT_PACIENTE = @"INSERT INTO paciente 
 (id_pessoa,
 id_convenio,
@@ -291,12 +219,23 @@ VALUES
 0
 )";
         
-        private const String SQL_SELECT_PESSOAS = @"SELECT id,
-nome, 
-cgccpf, 
-flstatus 
-from pessoa";
-        
+        private const String SQL_SELECT_PESSOAS = @"SELECT p.id as Código, 
+       p.nome Nome, 
+       cgccpf CPF, 
+       p.flstatus Status, 
+       pa.numero_prontuario Prontuário, 
+       pa.paciente_risco as Risco, 
+       (select nome from convenio where id = pa.id_convenio) Convênio, 
+       e.CEP, 
+       e.Rua, 
+       numero as Número, 
+       bairro as Bairro,
+       cidade as Cidade, 
+       UF as Estado
+        FROM pessoa p 
+        LEFT JOIN endereco e ON p.id = e.id_pessoa
+        LEFT JOIN paciente pa ON p.id = pa.id_pessoa";
+
         private const String SQL_UPDATE_PESSOA = @"UPDATE pessoa 
 SET nome = @nome,
 cgccpf = @cgccpf,
@@ -311,20 +250,9 @@ paciente_risco = @paciente_risco,
 flstatus = 'A',
 flobito = 0
 where id_pessoa = @id_pessoa";
-        private const String SQL_UPDATE_ENDERECO = @"UPDATE endereco 
-SET id_pessoa = @id_pessoa,
-CEP = @cep,
-rua = @rua,
-numero = @numero,
-bairro = @bairro,
-cidade = @cidade,
-uf = @uf
-where id_pessoa = @id_pessoa";
 
         private const String SQL_DELETE_PESSOA = @"DELETE FROM pessoa
 WHERE id = @id";
-        private const String SQL_DELETE_ENDERECO = @"DELETE FROM endereco
-WHERE id_pessoa = @id_pessoa";
         private const String SQL_DELETE_PACIENTE = @"DELETE FROM paciente
 WHERE id_pessoa = @id_pessoa";
         #endregion
