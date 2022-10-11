@@ -47,10 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ConexaoForms.cs" />
     <Compile Include="Data\ConnectionMySQL.cs" />
     <Compile Include="Data\ConvenioRepository.cs" />
     <Compile Include="Data\PacienteRepository.cs" />
-    <Compile Include="Data\RepositoryEndereco.cs" />
+    <Compile Include="Data\EnderecoRepository.cs" />
+    <Compile Include="Data\PessoaRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

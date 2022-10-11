@@ -9,13 +9,12 @@ using System.Windows.Forms;
 
 namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
 {
-    public class RepositoryEndereco
+    public class EnderecoRepository
     {
 
-
-        public void UpdateEndereco(Paciente paciente)
+        #region Methods
+        public void Update(Paciente paciente, MySqlConnection conn)
         {
-            MySqlConnection conn = ConnectionMySQL.GetConnection();
             try
             {
                 MySqlCommand cmd = new MySqlCommand(SQL_UPDATE_ENDERECO, conn);
@@ -35,17 +34,14 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
                 throw;
             }
         }
-
-        public int ExcluiEndereco(Paciente paciente)
+        public void Exclui(Paciente paciente, MySqlConnection conn)
         {
-            MySqlConnection conn = ConnectionMySQL.GetConnection();
             try
             {
                 MySqlCommand cmd = new MySqlCommand(SQL_DELETE_ENDERECO, conn);
                 cmd.Parameters.Add("@id_pessoa", MySqlDbType.Int32).Value = paciente.Pessoa.Id;
 
                 cmd.ExecuteNonQuery();
-                return 0;
             }
             catch (Exception myExc)
             {
@@ -53,9 +49,8 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
                 throw;
             }
         }
-        public void SaveEndereco(Paciente paciente)
+        public void Save(Paciente paciente, MySqlConnection conn)
         {
-            MySqlConnection conn = ConnectionMySQL.GetConnection();
             try
             {
                 MySqlCommand cmd = new MySqlCommand(SQL_INSERT_ENDERECO, conn);
@@ -75,7 +70,9 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms.Data
                 throw;
             }
         }
+        #endregion
 
+        #region SQLs
         private const String SQL_INSERT_ENDERECO = @"INSERT INTO endereco 
 (id_pessoa,
 CEP,
@@ -103,5 +100,6 @@ uf = @uf
 where id_pessoa = @id_pessoa";
         private const String SQL_DELETE_ENDERECO = @"DELETE FROM endereco
 WHERE id_pessoa = @id_pessoa";
+        #endregion
     }
 }

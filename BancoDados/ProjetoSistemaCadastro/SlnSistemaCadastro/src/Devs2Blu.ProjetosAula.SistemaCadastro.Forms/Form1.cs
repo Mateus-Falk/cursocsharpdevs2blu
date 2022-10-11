@@ -17,8 +17,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
     {
         public MySqlConnection Conn { get; set; }
         public ConvenioRepository ConvenioRepository = new ConvenioRepository();
-        public PacienteRepository PacienteRepository = new PacienteRepository();
-        public RepositoryEndereco RepositoryEndereco = new RepositoryEndereco();
+        public ConexaoForms ConexaoForms = new ConexaoForms();
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +34,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
         }
         private void PopulaDataGridPessoa()
         {
-            var listPessoas = PacienteRepository.GetPessoas();
+            var listPessoas = ConexaoForms.GetPessoas();
             gridPaciente.DataSource = new BindingSource(listPessoas, null);           
         }
         private bool validaFormCadastro() 
@@ -60,6 +59,25 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
                 return false;
 
             return true;
+        }
+        private void AtualizaCampos(Paciente paciente)
+        {
+            Random rd = new Random();
+            string[] nivelRisco = { "Baixo", "Médio", "Alto" };
+
+            paciente.Pessoa.Nome = txtNome.Text;
+            paciente.Pessoa.CGCCPF = txtCGCCPF.Text.Replace(',', '.');
+
+            paciente.Convenio.Id = (int)cboConvenio.SelectedValue;
+            paciente.NrProntuario = rd.Next(1000, 9999);
+            paciente.PacienteRisco = nivelRisco[rd.Next(0, nivelRisco.Length)];
+
+            paciente.Endereco.CEP = mskCEP.Text.Replace(',', '.');
+            paciente.Endereco.Rua = txtRua.Text;
+            paciente.Endereco.Numero = Int32.Parse(txtNumero.Text);
+            paciente.Endereco.Bairro = txtBairro.Text;
+            paciente.Endereco.Cidade = txtCidade.Text;
+            paciente.Endereco.UF = cboUF.Text;
         }
         #endregion
 
@@ -92,27 +110,12 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
         {
             if (validaFormCadastro())
             {
-                Random rd =new Random();
-                string[] nivelRisco = { "Baixo", "Médio", "Alto"};
-
                 Paciente paciente = new Paciente();
-                paciente.Pessoa.Nome = txtNome.Text;
-                paciente.Pessoa.CGCCPF = txtCGCCPF.Text.Replace(',', '.');
-
-                paciente.Convenio.Id = (int) cboConvenio.SelectedValue;
-                paciente.NrProntuario = rd.Next(1000, 9999);
-                paciente.PacienteRisco = nivelRisco[rd.Next(0,nivelRisco.Length)];
-
-                paciente.Endereco.CEP = mskCEP.Text.Replace(',', '.');
-                paciente.Endereco.Rua = txtRua.Text;
-                paciente.Endereco.Numero = Int32.Parse(txtNumero.Text);
-                paciente.Endereco.Bairro = txtBairro.Text;
-                paciente.Endereco.Cidade = txtCidade.Text;
-                paciente.Endereco.UF = cboUF.Text;
+               
+                AtualizaCampos(paciente);
                 
+                var pacienteResult = ConexaoForms.Save(paciente);
 
-                var pacienteResult = PacienteRepository.Save(paciente);
-                RepositoryEndereco.SaveEndereco(paciente);
                 if (pacienteResult.Pessoa.Id > 0)
                 {
                     MessageBox.Show($"Pessoa {paciente.Pessoa.Id} - {paciente.Pessoa.Nome} salva com sucesso!", "Adicionar Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -124,42 +127,30 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             Paciente paciente = new Paciente();
-            paciente.Pessoa.Id = int.Parse(gridPaciente.CurrentRow.Cells[0].Value.ToString());
-            PacienteRepository.Exclui(paciente);
+            paciente.Pessoa.Id = int.Parse(gridPaciente.CurrentRow.Cells["Código"].Value.ToString());
             
-            var result = PacienteRepository.Exclui(paciente);
+            var result = ConexaoForms.Exclui(paciente);
             if (result == 0)
             {
                 MessageBox.Show($"Pessoa {paciente.Pessoa.Id} - {paciente.Pessoa.Nome} Excluída com sucesso!", "Excluir Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 PopulaDataGridPessoa();
             }
         }
+
         private void BtnInfo_Click(object sender, EventArgs e)
         {
-            Paciente paciente = new Paciente();
-
             if (validaFormCadastro())
             {
-                Random rd = new Random();
-                string[] nivelRisco = { "Baixo", "Médio", "Alto" };
+                Paciente paciente = new Paciente();
 
-                paciente.Pessoa.Nome = txtNome.Text;
-                paciente.Pessoa.CGCCPF = txtCGCCPF.Text.Replace(',', '.');
+                paciente.Pessoa.Id = int.Parse(gridPaciente.CurrentRow.Cells["Código"].Value.ToString());
+                AtualizaCampos(paciente);
 
-                paciente.Convenio.Id = (int)cboConvenio.SelectedValue;
-                paciente.NrProntuario = rd.Next(1000, 9999);
-                paciente.PacienteRisco = nivelRisco[rd.Next(0, nivelRisco.Length)];
+                MySqlConnection conn = ConnectionMySQL.GetConnection();
 
-                paciente.Pessoa.Id = int.Parse(gridPaciente.CurrentRow.Cells[0].Value.ToString());
-                paciente.Endereco.CEP = mskCEP.Text.Replace(',', '.');
-                paciente.Endereco.Rua = txtRua.Text;
-                paciente.Endereco.Numero = Int32.Parse(txtNumero.Text);
-                paciente.Endereco.Bairro = txtBairro.Text;
-                paciente.Endereco.Cidade = txtCidade.Text;
-                paciente.Endereco.UF = cboUF.Text;
 
-                var pacienteResult = PacienteRepository.Update(paciente);
-                RepositoryEndereco.UpdateEndereco(paciente);
+                var pacienteResult = ConexaoForms.Update(paciente);
+                
                 if (pacienteResult.Pessoa.Id > 0)
                 {
                     MessageBox.Show($"Pessoa {paciente.Pessoa.Id} - {paciente.Pessoa.Nome} Atualizada com sucesso!", "Atalizar Pessoa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -184,7 +175,7 @@ namespace Devs2Blu.ProjetosAula.SistemaCadastro.Forms
         {
             Paciente paciente = new Paciente();
 
-            paciente.Pessoa.Id = int.Parse(gridPaciente.CurrentRow.Cells[0].Value.ToString());
+            paciente.Pessoa.Id = int.Parse(gridPaciente.CurrentRow.Cells["Código"].Value.ToString());
 
             txtNome.Text = gridPaciente.CurrentRow.Cells[1].Value.ToString();
             txtCGCCPF.Text = gridPaciente.CurrentRow.Cells[2].Value.ToString();

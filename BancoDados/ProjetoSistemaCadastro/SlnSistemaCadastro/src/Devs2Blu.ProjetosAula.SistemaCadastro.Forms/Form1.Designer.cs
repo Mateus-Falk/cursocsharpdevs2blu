@@ -30,9 +30,9 @@
         {
             this.gbFormCadastro = new System.Windows.Forms.GroupBox();
             this.txtCGCCPF = new System.Windows.Forms.MaskedTextBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.gbEnderecoCadastro = new System.Windows.Forms.GroupBox();
+            this.cboUF = new System.Windows.Forms.ComboBox();
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -52,6 +52,7 @@
             this.rdFisica = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.cboConvenio = new System.Windows.Forms.ComboBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.gbConteudo = new System.Windows.Forms.GroupBox();
             this.gridPaciente = new System.Windows.Forms.DataGridView();
             this.panelControles = new System.Windows.Forms.Panel();
@@ -63,7 +64,6 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cboUF = new System.Windows.Forms.ComboBox();
             this.gbFormCadastro.SuspendLayout();
             this.gbEnderecoCadastro.SuspendLayout();
             this.gbTipoPessoa.SuspendLayout();
@@ -101,19 +101,6 @@
             this.txtCGCCPF.Size = new System.Drawing.Size(123, 20);
             this.txtCGCCPF.TabIndex = 20;
             // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.Gold;
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(106, 93);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 31);
-            this.btnLimpar.TabIndex = 15;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(62, 39);
@@ -142,6 +129,42 @@
             this.gbEnderecoCadastro.TabIndex = 11;
             this.gbEnderecoCadastro.TabStop = false;
             this.gbEnderecoCadastro.Text = "Endereço/Contato";
+            // 
+            // cboUF
+            // 
+            this.cboUF.FormattingEnabled = true;
+            this.cboUF.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.cboUF.Location = new System.Drawing.Point(127, 26);
+            this.cboUF.Name = "cboUF";
+            this.cboUF.Size = new System.Drawing.Size(42, 21);
+            this.cboUF.TabIndex = 20;
             // 
             // mskCEP
             // 
@@ -323,6 +346,19 @@
             this.cboConvenio.Size = new System.Drawing.Size(124, 21);
             this.cboConvenio.TabIndex = 2;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.Gold;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpar.Location = new System.Drawing.Point(106, 93);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 31);
+            this.btnLimpar.TabIndex = 15;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // gbConteudo
             // 
             this.gbConteudo.Controls.Add(this.gridPaciente);
@@ -437,42 +473,6 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // cboUF
-            // 
-            this.cboUF.FormattingEnabled = true;
-            this.cboUF.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC",
-            "SP",
-            "SE",
-            "TO"});
-            this.cboUF.Location = new System.Drawing.Point(127, 26);
-            this.cboUF.Name = "cboUF";
-            this.cboUF.Size = new System.Drawing.Size(42, 21);
-            this.cboUF.TabIndex = 20;
             // 
             // Form1
             // 
