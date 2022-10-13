@@ -1,0 +1,41 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Devs2Blu.SlnAgendaContato.AgendaContato.Main.Data
+{
+    public class ConnectionMySQL
+    {
+        public static String ConnectionString { get; set; }
+        public static String Server { get; set; }
+        public static String DataBase { get; set; }
+        public static String User { get; set; }
+        public static String Password { get; set; }
+
+        public static MySqlConnection GetConnection()
+        {
+            Server = "localhost";
+            DataBase = "agendacontatos";
+            User = "root";
+            Password = "MinguiPetaBidu#3Dogs";
+            ConnectionString = $"Persist Security Info=False;server={Server};database={DataBase};uid={User};server={Server};database={DataBase};uid={User};pwd='{Password}'";
+
+            var conn = new MySqlConnection(ConnectionString);
+            try
+            {
+                conn.Open();
+            }
+            catch (MySqlException myEx)
+            {
+                MessageBox.Show(myEx.Message, "Erro ao Conectar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            return conn;
+        }
+    }
+}

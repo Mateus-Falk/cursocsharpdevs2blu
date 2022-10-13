@@ -1,0 +1,6 @@
+C:\devs2blu\AgendaDeContatos\SlnAgendaContato\Devs2Blu.SlnAgendaContato\src\Devs2Blu.SlnAgendaContato.AgendaContato.Models\bin\Debug\Devs2Blu.SlnAgendaContato.AgendaContato.Models.dll
+C:\devs2blu\AgendaDeContatos\SlnAgendaContato\Devs2Blu.SlnAgendaContato\src\Devs2Blu.SlnAgendaContato.AgendaContato.Models\bin\Debug\Devs2Blu.SlnAgendaContato.AgendaContato.Models.pdb
+C:\devs2blu\AgendaDeContatos\SlnAgendaContato\Devs2Blu.SlnAgendaContato\src\Devs2Blu.SlnAgendaContato.AgendaContato.Models\obj\Debug\Devs2Blu.SlnAgendaContato.AgendaContato.Models.csproj.AssemblyReference.cache
+C:\devs2blu\AgendaDeContatos\SlnAgendaContato\Devs2Blu.SlnAgendaContato\src\Devs2Blu.SlnAgendaContato.AgendaContato.Models\obj\Debug\Devs2Blu.SlnAgendaContato.AgendaContato.Models.csproj.CoreCompileInputs.cache
+C:\devs2blu\AgendaDeContatos\SlnAgendaContato\Devs2Blu.SlnAgendaContato\src\Devs2Blu.SlnAgendaContato.AgendaContato.Models\obj\Debug\Devs2Blu.SlnAgendaContato.AgendaContato.Models.dll
+C:\devs2blu\AgendaDeContatos\SlnAgendaContato\Devs2Blu.SlnAgendaContato\src\Devs2Blu.SlnAgendaContato.AgendaContato.Models\obj\Debug\Devs2Blu.SlnAgendaContato.AgendaContato.Models.pdb

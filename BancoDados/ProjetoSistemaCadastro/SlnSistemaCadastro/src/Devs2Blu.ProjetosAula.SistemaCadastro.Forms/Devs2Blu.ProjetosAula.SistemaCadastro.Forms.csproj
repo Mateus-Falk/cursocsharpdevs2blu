@@ -105,5 +105,8 @@
   <ItemGroup>
     <None Include="Data\update.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\limpar.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
