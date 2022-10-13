@@ -1,7 +1,5 @@
 select * from pessoa;
 
-select * from pessoas;
-
 select * from endereco;
 
 select *
