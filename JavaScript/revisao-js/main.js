@@ -1,13 +1,20 @@
 const usuario = {
-    nome:'',
-    login:'',
-    senha:''
+    nome: '',
+    login: '',
+    senha: ''
 }
 
 const LOGADO = 'userLogado';
 const USER = 'user';
 
 
+
+
+$(document).ready(()=>{
+    console.log('JQuery loaded.');
+
+    verificaLogin();
+});
 
 // Funcions
 
