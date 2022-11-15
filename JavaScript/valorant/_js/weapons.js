@@ -77,7 +77,7 @@ const mostraDetalhesWeapon = (weapon) => {
                                                         <ul class="list-group">
                                                             <li class="list-group-item text-dark bg-red">Head: ${weapon.weaponStats.damageRanges[0].headDamage}<li>
                                                             <li class="list-group-item text-dark bg-red">Body: ${weapon.weaponStats.damageRanges[0].bodyDamage}<li>
-                                                            <li class="list-group-item text-dark bg-red">Legs: ${weapon.weaponStats.damageRanges[0].legsDamage}<li>
+                                                            <li class="list-group-item text-dark bg-red">Legs: ${weapon.weaponStats.damageRanges[0].legDamage}<li>
                                                         </ul>
                                                     </article>
                                                 </div>
