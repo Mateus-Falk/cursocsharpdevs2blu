@@ -21,7 +21,7 @@ const criaListaWeapon = (data) => {
     filterClick.addEventListener("click", () => filterWeapon(weapon));
 
     let htmlBody = `<div class="card-header">
-                            <h2 class="text-white text-center">${weapon.displayName}</h2>
+                            <h2 class="text-dark text-center">${weapon.displayName}</h2>
                         </div>
                         <div class="card-body">
                             <img class="card-img-top" src="${weapon.displayIcon}" alt="${weapon.displayName}">
@@ -124,7 +124,7 @@ const mostraDetalhesWeapon = (weapon) => {
 
   const filterWeapon = (weapon) => {
     let filter = getElement("#filter-weapon").value;
-    if (weapon.displayName == filter) {
+    if (weapon.displayName.toLowerCase() == filter.toLowerCase()) {
         mostraDetalhesWeapon(weapon)
     } 
 }

@@ -21,7 +21,7 @@ const criaListaAgent = (data) => {
     
     
     let htmlBody = `<div class="card-header">
-                            <h2 class="text-white text-center">${agent.displayName}</h2>
+                            <h2 class="text-dark text-center">${agent.displayName}</h2>
                         </div>
                         <div class="card-body">
                             <img class="card-img-top" src="${agent.displayIconSmall}" alt="${agent.displayName}">
@@ -187,18 +187,11 @@ const mostraDetalhesAgent = (agent) => {
   $("#charModal").modal("show");
 };
 
-const cardLista = (agent)=>{`<div class="card-header">
-<h2 class="text-white text-center">${agent.displayName}</h2>
-</div>
-<div class="card-body">
-<img class="card-img-top" src="${agent.displayIconSmall}" alt="${agent.displayName}">
-</div>`};
 
 
 const filterAgent = (agent) => {
     let filter = getElement("#filter-agent").value;
-    if (agent.displayName == filter) {
+    if (agent.displayName.toLowerCase() == filter.toLowerCase()) {
         mostraDetalhesAgent(agent)
     }
-    
 }

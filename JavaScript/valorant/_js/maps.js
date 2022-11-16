@@ -21,7 +21,7 @@ const criaListaMap = (data) => {
         filterClick.addEventListener("click", () => filterMap(map));
         let htmlBody = `
         <div class="card-header">
-            <h2 class="text-white text center">${map.displayName}</h2>
+            <h2 class="text-dark text center">${map.displayName}</h2>
         </div>
         <div class="card-body">
             <img class="img-fluid" src="${map.splash}" alt="${map.displayName}">
@@ -60,7 +60,7 @@ const mostraDetalhesMap = (map)=> {
 }
 const filterMap = (map) => {
     let filter = getElement("#filter-map").value;
-    if (map.displayName == filter) {
+    if (map.displayName.toLowerCase() == filter.toLowerCase()) {
         mostraDetalhesMap(map)
     } 
 }
