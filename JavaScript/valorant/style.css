@@ -1,0 +1,51 @@
+body{
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+nav img {
+    width: 64px;
+    height: 64px;
+}
+
+
+#destaque {
+    width: 100vw;
+}
+
+#destaque img {
+    width: 100vw;
+}
+
+.bg-red {
+    background-color: rgb(243, 35, 35);
+}
+
+footer {
+    height: 60px;
+    width: 100vw;
+    position: absolute;
+    bottom: 100;
+    right: 0; 
+}
+
+li {
+    list-style: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: var(--bs-accordion-btn-icon);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgb(243, 35, 35);
+}
+
+.accordion {
+    --bs-accordion-border-color: rgba(0, 0, 0, 0.125);
+    --bs-accordion-btn-focus-box-shadow: red;
+}

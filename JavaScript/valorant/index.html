@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant</title>
+    <script
+      src="https://kit.fontawesome.com/939df34509.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-dark">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-red">
+        <div class="container-fluid">
+          <img src="_img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          <p class="navbar-brand p-2">
+            Valorant
+          </p>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="_views/agents.html"
+                  >Agents</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="_views/maps.html"
+                  >Maps</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="_views/weapons.html"
+                  >Weapons</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <div id="destaque">
+      <img src="_img/destaque.jpg" alt="destaque" class="img-fluid" />
+    </div>
+    <div
+      class="container col-10 col-sm-7 fs-2 rounded mt-4 mb-4 bg-red p-3 text-dark"
+    >
+      <p>
+        Blend your style and experience on a global, competitive stage. You have
+        13 rounds to attack and defend your side using sharp gunplay and
+        tactical abilities. And, with one life per-round, you'll need to think
+        faster than your opponent if you want to survive. Take on foes across
+        Competitive and Unranked modes as well as Deathmatch and Spike Rush.
+      </p>
+    </div>
+      <div class="container my-4">
+        <h1 class="text-white text-center">What's New</h1>
+        <a href="_views/agents.html">
+          <main class="row justify-content-center">
+          </main>
+        </a>
+        <div
+        class="modal fade"
+        id="charModal"
+        tabindex="-1"
+        aria-labelledby="charModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content bg-red">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-white" id="charModalLabel">Agent</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div id="modal-body" class="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer class="bg-red">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            target="_blank"
+            href="https://www.facebook.com/VALORANTbrasil/"
+            ><i class="fa fa-facebook"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            target="_blank"
+            href="https://www.youtube.com/channel/UCgWiuB2PQIUhJgEN9No281g"
+            ><i class="fa fa-youtube"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            target="_blank"
+            href="https://www.instagram.com/valorantbrasil/"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            target="_blank"
+            href="https://twitter.com/valorantbrasil"
+            ><i class="fa fa-twitter"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Scripts -->
+    <script src="_js/library.js"></script>
+    <script src="_js/main.js"></script>
+  </body>
+</html>
