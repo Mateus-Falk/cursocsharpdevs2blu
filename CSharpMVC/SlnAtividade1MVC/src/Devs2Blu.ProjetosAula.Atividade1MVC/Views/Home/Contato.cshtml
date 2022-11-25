@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Envie Sua Mensagem";
+}
+<div class="container">
+<h1>@ViewData["Title"]</h1>
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="nome">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="nome@email.com">
+    </div>
+    <div class="mb-3">
+        <label for="mensagem" class="form-label">Mensagem</label>
+        <textarea class="form-control" id="mensagem" rows="3"></textarea>
+    </div>
+    <button type="button" class="btn btn-dark">Enviar</button>
+</div>
