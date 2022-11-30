@@ -1,0 +1,22 @@
+﻿@model Agents
+
+<div class="conteiner">
+	<div class="row">
+		@foreach (var item in Model.data)
+		{
+			<div class="card bg-danger col-3 m-2">
+				<div class="card-header">
+					<img class="img-fluid" src="@item.displayIcon" alt="@item.displayName">
+				</div>
+				<div class="card-body">
+					<article>
+						<div class="list-group">
+							<div class="list-group-item bg-dark text-danger">@item.displayName</div>
+							<div class="list-group-item bg-dark text-danger">@item.description</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		}
+	</div>
+</div>
