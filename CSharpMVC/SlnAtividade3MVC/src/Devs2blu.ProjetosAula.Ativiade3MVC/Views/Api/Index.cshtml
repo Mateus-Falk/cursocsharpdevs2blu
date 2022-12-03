@@ -1,0 +1,12 @@
+﻿<div class="row">
+	<h1>Lista de Digimons</h1>
+</div>
+<div class="row" id="content-list"></div>
+
+@section Scripts {
+	<script type="text/javascript">
+		$(document).ready(() => {
+			getView('table', 'loaddigimon', '#content-list')
+		})
+	</script>
+}

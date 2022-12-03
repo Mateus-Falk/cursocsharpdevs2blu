@@ -1,0 +1,61 @@
+﻿@model List<Devs2blu.ProjetosAula.Ativiade3MVC.Models.DTOAPI.DigimonDTO>
+
+<div id="carouselDigimon" class="carousel carousel-dark slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselDigimon" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselDigimon" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselDigimon" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        @for (int i = 0; i < 3; i++)
+        {
+            if(i == 0)
+            {
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center">
+                    <img src="@Model[i].img" class="d-block w-50" alt="@Model[i].name">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-black">@Model[i].name</h5>
+                        <p class="text-black">@Model[i].level</p>
+                    </div>
+                </div>
+            </div>  
+            } else
+            {
+             <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <img src="@Model[i].img" class="d-block w-50" alt="@Model[i].name">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-black">@Model[i].name</h5>
+                        <p class="text-black">@Model[i].level</p>
+                    </div>
+                </div>
+            </div>
+            }
+        }
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDigimon" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDigimon" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="h-100 p-5 text-white bg-dark rounded-3">
+    <h2>DIGIMON</h2>
+    <p>Um grupo de sete crianças é levado para outro mundo -
+        o Digital World - que descobrem ser uma realidade 
+        paralela habitada por criaturas chamadas Digimon. 
+        Lá, descobrem que foram escolhidas para salvar o 
+        Digital World das forças do mal que ameaçam destruí-lo.
+        Para este fim, cada criança é agrupada com um parceiro 
+        Digimon que tem de ajudar a evoluir para níveis mais poderosos
+        e poder, assim, derrotar os inimigos. Enquanto sobrevivem 
+        neste novo mundo selvagem, vão descobrindo coisas sobre ele e 
+        sobre si próprios.
+    </p>
+</div>

@@ -1,0 +1,19 @@
+﻿@model List<Devs2blu.ProjetosAula.Ativiade3MVC.Models.DTOAPI.DigimonDTO>
+
+<div class="row" id="content-list">
+	@foreach (var digimon in Model)
+	{
+		<div class="card bg-dark" style="width:20rem;">
+			<div class="card-header">
+				<img class="card-img-top" src="@digimon.img">
+			</div>
+			<div class="card-body bg-white">
+				<div class="text-center">@digimon.name</div>
+				<article>
+					<div class="text-center">@digimon.level</div>
+				</article>
+			</div>
+
+		</div>		
+	}
+</div>

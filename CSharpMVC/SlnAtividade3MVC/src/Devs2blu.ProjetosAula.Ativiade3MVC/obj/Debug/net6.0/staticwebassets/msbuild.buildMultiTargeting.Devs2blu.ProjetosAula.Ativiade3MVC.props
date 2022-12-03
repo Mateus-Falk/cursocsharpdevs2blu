@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Devs2blu.ProjetosAula.Ativiade3MVC.props" />
+</Project>
