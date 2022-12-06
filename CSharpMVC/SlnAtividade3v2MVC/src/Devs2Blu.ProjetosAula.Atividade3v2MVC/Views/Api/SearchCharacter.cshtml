@@ -1,0 +1,22 @@
+﻿@model List<Devs2Blu.ProjetosAula.Atividade3v2MVC.Models.DTOAPI.CharacterDTO>
+
+
+<div class="row" id="content-list">
+	@foreach(var character in Model)
+	{
+		<div class="card bg-dark" style="width:20rem">
+			<div class="card-header">
+				<h1 class="text-white">@character.name</h1>
+			</div>
+			<div class="card-body">
+				<article>
+					<div class="list-group">
+						<div class="list-group-item">Description: @character.description</div>
+						<div class="list-group-item">Gender: @character.gender</div>
+						<div class="list-group-item">Race: @character.race</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	}
+</div>

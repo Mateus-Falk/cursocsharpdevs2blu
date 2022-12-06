@@ -34,8 +34,8 @@ namespace Devs2blu.ProjetosAula.Ativiade3MVC.Controllers
         [Route("search/{nameDigimon}")]
         public async Task<PartialViewResult> SearchDigimon(string nameDigimon)
         {
-            var Digimon = await service.GetDigimonByName(nameDigimon);
-            return PartialView(Digimon);
+            var digimon = await service.GetDigimonByName(nameDigimon);
+            return PartialView(digimon);
         }
     }
 }

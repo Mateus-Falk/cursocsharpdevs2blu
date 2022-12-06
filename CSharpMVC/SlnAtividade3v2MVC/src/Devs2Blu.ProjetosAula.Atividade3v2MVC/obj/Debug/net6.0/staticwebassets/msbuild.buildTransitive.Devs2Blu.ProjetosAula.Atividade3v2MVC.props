@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Devs2Blu.ProjetosAula.Atividade3v2MVC.props" />
+</Project>

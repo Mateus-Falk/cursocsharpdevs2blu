@@ -1,0 +1,23 @@
+﻿@model List<Devs2Blu.ProjetosAula.Atividade3v2MVC.Models.DTOAPI.CharacterDTO>
+
+	<table class="table table-dark table-striped">
+		<thead>
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">Description</th>
+				<th scope="col">Gender</th>
+				<th scope="col">Race</th>
+			</tr>
+		</thead>
+		<tbody>
+		@foreach(var character in Model)
+		{
+			<tr>
+				<td>@character.name</td>
+				<td>@character.description</td>
+				<td>@character.gender</td>
+				<td>@character.race</td>
+			</tr>
+		}
+		</tbody>
+	</table>
