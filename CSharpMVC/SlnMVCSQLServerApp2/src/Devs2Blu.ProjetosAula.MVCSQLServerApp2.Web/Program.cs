@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 // Context DB SQL Server
 builder.Services.AddDbContext<ContextoDatabase>
-    (options =>options.UseSqlServer("Server=DESKTOP-UME51NM\\SQLMATEUS;Database=ListaCompras;User Id=sa;Password=zuky;"));
+    (options =>options.UseSqlServer("Server=DESKTOP-UME51NM\\SQLMATEUS;Database=ListaCompras;User Id=sa;Password=zuky; TrustServerCertificate=True;"));
 
 var app = builder.Build();
 

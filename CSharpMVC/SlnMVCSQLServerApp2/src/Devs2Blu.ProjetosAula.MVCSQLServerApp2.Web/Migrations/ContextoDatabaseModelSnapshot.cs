@@ -38,6 +38,28 @@ namespace Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("categorias");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nome = "Alimentos Não Perecíveis"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nome = "Laticínios"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nome = "Limpeza"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nome = "Bebidas Não Alcoólicas"
+                        });
                 });
 
             modelBuilder.Entity("Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web.Models.Entities.Produto", b =>
@@ -49,16 +71,17 @@ namespace Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("Id_Categoria")
-                        .HasColumnType("int");
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("int")
+                        .HasColumnName("CategoriaId");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("name");
 
-                    b.Property<decimal>("Preco")
-                        .HasColumnType("decimal(18,2)")
+                    b.Property<double>("Preco")
+                        .HasColumnType("float")
                         .HasColumnName("preco");
 
                     b.Property<int>("Quantidade")
@@ -67,16 +90,82 @@ namespace Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_Categoria");
+                    b.HasIndex("CategoriaId");
 
                     b.ToTable("produtos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoriaId = 1,
+                            Nome = "Arroz Tio Urbano",
+                            Preco = 10.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoriaId = 1,
+                            Nome = "Feijão Tio Urbano",
+                            Preco = 10.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoriaId = 2,
+                            Nome = "Queijo",
+                            Preco = 20.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoriaId = 2,
+                            Nome = "Iogurte",
+                            Preco = 20.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoriaId = 3,
+                            Nome = "Sabão Líquido",
+                            Preco = 30.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoriaId = 3,
+                            Nome = "Multiuso",
+                            Preco = 30.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoriaId = 4,
+                            Nome = "Suco de Laranja",
+                            Preco = 40.0,
+                            Quantidade = 5
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoriaId = 4,
+                            Nome = "Coca-Cola 2L",
+                            Preco = 40.0,
+                            Quantidade = 5
+                        });
                 });
 
             modelBuilder.Entity("Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web.Models.Entities.Produto", b =>
                 {
                     b.HasOne("Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web.Models.Entities.Categoria", "Categoria")
                         .WithMany("Produtos")
-                        .HasForeignKey("Id_Categoria")
+                        .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
