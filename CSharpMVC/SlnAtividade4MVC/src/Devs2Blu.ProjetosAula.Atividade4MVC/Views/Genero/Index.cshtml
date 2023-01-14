@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Devs2Blu.ProjetosAula.Atividade4MVC.Models.Entities.Genero>
+
+	<div class="container">
+	<p>
+		<a class="btn btn-dark" asp-action="Create">Novo Genero</a>
+	</p>
+
+		<div row>
+			@foreach (var item in Model)
+			{
+				<div class="card col-3">
+					<div class="card-header bg-danger">
+						<p>
+							@Html.DisplayNameFor(item => item.Id) - 
+							@Html.DisplayFor(modelItem => item.Id)
+						</p>
+						<p>
+							@Html.DisplayNameFor(item => item.Nome) - 
+							@Html.DisplayFor(modelItem => item.Nome)
+						</p>
+					</div>
+					<div class="card-body bg-danger">
+						<a class="btn btn-dark" href="#" onclick="updateGenero(@item.Id)">Edit</a>
+						<a class="btn btn-dark" href="#" onclick="deleteGenero(@item.Id)">Delete</a>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+
+	<div class="modal" id="modal" tabindex="-1"></div>
+
+	@section Scripts {
+		<script>
+			$(document).ready(() => {
+				$('#btnCancelar').click(() => {
+					$('#msgCat').hide();
+					$('#msgBody').html("");
+					$('#btnExcluir').unbind();
+				});
+
+			});
+			const deleteGenero = (id) => {
+					$('#modal').load(`@Url.Action("Delete")/${id}`,() => {
+						$('#modal').modal('show');
+					});
+			};
+			const updateGenero = (id) => {
+				$('#modal').load(`@Url.Action("Edit")/${id}`,() => {
+					$('#modal').modal('show');
+				});
+			}
+		</script>
+	}

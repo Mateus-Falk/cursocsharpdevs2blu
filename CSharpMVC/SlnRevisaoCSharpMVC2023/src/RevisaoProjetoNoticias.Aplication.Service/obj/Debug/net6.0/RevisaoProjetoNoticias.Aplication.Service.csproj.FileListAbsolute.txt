@@ -1,0 +1,12 @@
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\bin\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.deps.json
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\bin\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.dll
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\bin\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.pdb
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.csproj.AssemblyReference.cache
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.AssemblyInfoInputs.cache
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.AssemblyInfo.cs
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.csproj.CoreCompileInputs.cache
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.dll
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\refint\RevisaoProjetoNoticias.Aplication.Service.dll
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\RevisaoProjetoNoticias.Aplication.Service.pdb
+C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Aplication.Service\obj\Debug\net6.0\ref\RevisaoProjetoNoticias.Aplication.Service.dll

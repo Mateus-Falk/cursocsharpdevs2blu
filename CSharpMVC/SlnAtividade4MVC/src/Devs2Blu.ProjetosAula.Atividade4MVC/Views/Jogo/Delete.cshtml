@@ -1,0 +1,99 @@
+﻿@model Devs2Blu.ProjetosAula.Atividade4MVC.Models.DTO.JogoViewModel
+
+@{
+	Layout = null;
+}
+
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header" id="modal-header">
+			<h5 class="modal-title">Tem Certeza Que Deseja Excluir Esse Jogo</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div id="content">
+				<h4>Jogo</h4>
+				<hr/>
+				<dl class="row">
+					<dt class="col-sm-2">
+						@Html.DisplayNameFor(model => model.nome)
+					</dt>
+					<dd class="col-sm-10">
+						@Html.DisplayFor(model => model.nome)
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col-sm-2">
+						@Html.DisplayNameFor(model => model.personagem)
+					</dt>
+					<dd class="col-sm-10">
+						@Html.DisplayFor(model => model.personagem)
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col-sm-2">
+						@Html.DisplayNameFor(model => model.review)
+					</dt>
+					<dd class="col-sm-10">
+						@Html.DisplayFor(model => model.review)
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col-sm-2">
+						@Html.DisplayNameFor(model => model.nota)
+					</dt>
+					<dd class="col-sm-10">
+						@Html.DisplayFor(model => model.nota)
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col-sm-2">
+						@Html.DisplayNameFor(model => model.generoid)
+					</dt>
+					<dd class="col-sm-10">
+						@Html.DisplayFor(model => model.generoid)
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="modal-footer" id="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+			<button id="btnDeleteJogo" type="button" class="btn btn-danger">Delete</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(() => {
+		$('#btnDeleteJogo').click(() => executeDeleteJogo());
+	});
+
+	const executeDeleteJogo = () => {
+		$.ajax({
+			url: `@Url.Action("Delete")`,
+			method: 'POST',
+			data: {
+				id: @Model.id,
+				nome: '@Model.nome',
+				personagem: '@Model.personagem',
+				review: '@Model.review',
+				nota: @Model.nota,
+				generoid: @Model.generoid
+			},
+			success: (response) => {
+				if(response === "OK"){
+					let htmlMsg = ` <div class="alert alert-succes" id="alertMsg" style="display: block;">
+										<h2>Registro Apagado com Sucesso!</h2>
+									</div>`;
+					$('#content').html(htmlMsg);
+					$('#modal-jogo').show();
+					$('#modal-footer').hide();
+					$('#modal-header').hide();
+					setTimeout(()=>{
+						window.location.reload(1)
+					},2000);
+				}
+			}
+		});
+	}
+</script>

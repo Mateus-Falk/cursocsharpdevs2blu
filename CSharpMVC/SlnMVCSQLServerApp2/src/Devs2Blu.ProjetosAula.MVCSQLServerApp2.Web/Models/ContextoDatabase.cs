@@ -19,7 +19,12 @@ namespace Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web.Models
                 .HasOne(p => p.Categoria)
                 .WithMany(c => c.Produtos)
                 .HasForeignKey(p => p.CategoriaId);
-
+            
+           /* modelBuilder.Entity<Produto>()
+                .HasOne(p => p.Marca)
+                .WithMany(m => m.Produtos)
+                .HasForeignKey(p => p.MarcaId);
+*/
 
             //Seed
             modelBuilder.Entity<Categoria>()

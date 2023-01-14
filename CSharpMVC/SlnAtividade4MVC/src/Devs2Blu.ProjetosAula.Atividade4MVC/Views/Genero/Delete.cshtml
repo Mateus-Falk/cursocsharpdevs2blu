@@ -1,0 +1,65 @@
+﻿@model Devs2Blu.ProjetosAula.Atividade4MVC.Models.DTO.GeneroViewModel
+
+
+@{
+	Layout = null;
+}
+
+<div class="modal-dialog" id="modal-header">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h5 class="modal-title">Tem Certeza Que Deseja Excluir Esse Genero?</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div id="content">
+				<h4>Genero</h4>
+				<hr/>
+				<dl class="row">
+					<dt class="col-sm-2">
+						@Html.DisplayNameFor(model => model.nome)
+					</dt>
+					<dd class="col-sm-10">
+						@Html.DisplayFor(model => model.nome)
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="modal-footer" id="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+			<button id="btnDeleteGenero" type="button" class="btn btn-danger">Delete</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(() => {
+		$('#btnDeleteGenero').click(() => executeDeleteGenero());
+	});
+
+	const executeDeleteGenero = () => {
+		$.ajax({
+			url: `@Url.Action("Delete")`,
+			method: 'POST',
+			data: {
+				id: @Model.id,
+				nome:'@Model.nome'
+			},
+			success: (response) => {
+				if (response === 'OK') {
+					let htmlMsg = ` <div class="alert alert-succes" id="alertMsg" style="display: block;">
+										<h2>Registro Apagado com Sucesso!</h2>
+									</div>`;
+					$('#content').html(htmlMsg);
+					$('#modal').show();
+					$('#modal-footer').hide();
+					$('#modal-header').hide();
+					setTimeout(()=>{
+						window.location.reload(1)
+					},2000);
+				}
+			}
+		});
+	}
+
+</script>

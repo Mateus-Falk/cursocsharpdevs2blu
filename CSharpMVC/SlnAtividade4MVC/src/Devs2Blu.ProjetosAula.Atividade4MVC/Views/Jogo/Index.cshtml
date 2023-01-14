@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Devs2Blu.ProjetosAula.Atividade4MVC.Models.Entities.Jogo>
+
+<div class="container">
+<p>
+	<a class="btn btn-dark" asp-action="Create">Novo Jogo</a>
+</p>
+
+	<div row>
+		@foreach (var item in Model)
+		{
+			<div class="card col-3">
+				<div class="card-header bg-danger">
+					<h3>
+						@Html.DisplayNameFor(item => item.Nome) -
+						@Html.DisplayFor(modelItem => item.Nome)
+					</h3>
+				</div>
+				<div class="card-body bg-danger">
+					<article>
+						<div class="list-group">
+							<div class="list-group-item">
+								@Html.DisplayNameFor(item => item.Personagem) -
+								@Html.DisplayFor(modelItem => item.Personagem)
+							</div>
+							<div class="list-group-item">
+								@Html.DisplayNameFor(item => item.Review) -
+								@Html.DisplayFor(modelItem => item.Review)
+							</div>
+							<div class="list-group-item">
+								@Html.DisplayNameFor(item => item.Nota) -
+								@Html.DisplayFor(modelItem => item.Nota)
+							</div>
+							<div class="list-group-item">
+								@Html.DisplayNameFor(item => item.Genero) -
+								@Html.DisplayFor(modelItem => item.Genero.Nome)
+							</div>
+							<div class="list-group-item">
+								<a class="btn btn-dark" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+								<a class="btn btn-dark" href="#" onclick="deleteJogo(@item.Id)">Delete</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		}
+	</div>
+</div>
+
+<div class="modal" id="modal-jogo" tabindex="-1"></div>
+
+@section Scripts {
+	<script>
+		$(document).ready(() => {
+			$('#btnCancelar').click(() => {
+				$('#msgCat').hide();
+				$('#msgBody').html("");
+				$('#btnExcluir').unbind();
+			});
+		});
+
+		const deleteJogo = (id) => {
+			$('#modal-jogo').load(`@Url.Action("Delete")/${id}`,() => {
+				$('#modal-jogo').modal('show');
+			});
+		};
+	</script>
+}
