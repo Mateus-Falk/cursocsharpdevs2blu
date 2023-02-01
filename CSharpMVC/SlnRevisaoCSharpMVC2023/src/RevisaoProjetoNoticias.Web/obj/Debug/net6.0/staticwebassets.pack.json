@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\RevisaoProjetoNoticias.Web.bundle.scp.css"
     },
     {
+      "Id": "C:\\devs2blu\\CSharpMVC\\SlnRevisaoCSharpMVC2023\\src\\RevisaoProjetoNoticias.Web\\wwwroot\\Uploads\\1_IMG-20180223-WA0009.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\1_IMG-20180223-WA0009.jpeg"
+    },
+    {
       "Id": "C:\\devs2blu\\CSharpMVC\\SlnRevisaoCSharpMVC2023\\src\\RevisaoProjetoNoticias.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

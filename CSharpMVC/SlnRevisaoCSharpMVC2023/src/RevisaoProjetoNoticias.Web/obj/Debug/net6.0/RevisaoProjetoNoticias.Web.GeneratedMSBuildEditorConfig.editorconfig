@@ -16,12 +16,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\devs2blu\CSharpMVC\SlnRevisaoCSharpMVC2023\src\RevisaoProjetoNoticias.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/News/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/News/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/News/ImagePost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xJbWFnZVBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/News/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/devs2blu/CSharpMVC/SlnRevisaoCSharpMVC2023/src/RevisaoProjetoNoticias.Web/Views/Shared/Error.cshtml]

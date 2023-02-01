@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web",
+    "\\src\\Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web\\Models",
+    "\\src\\Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web\\Models\\Entities",
+    "\\src\\Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web\\Services",
+    "\\src\\Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web\\Services\\Interfaces"
+  ],
+  "SelectedNode": "\\src\\Devs2Blu.ProjetosAula.MVCSQLServerApp2.Web\\Services\\Interfaces\\ICategoriasService.cs",
+  "PreviewInSolutionExplorer": false
+}

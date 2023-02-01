@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YW3Eh1TGHib3edK6eZmQdOrKLDnmQX20FPNXCUAUnkk=",
+  "Hash": "WpTdphRBy2ZtNgPr+FYpNoSQ5nxacNKL1zjCFcqS3zU=",
   "Source": "RevisaoProjetoNoticias.Web",
   "BasePath": "_content/RevisaoProjetoNoticias.Web",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\devs2blu\\CSharpMVC\\SlnRevisaoCSharpMVC2023\\src\\RevisaoProjetoNoticias.Web\\wwwroot\\Uploads\\1_IMG-20180223-WA0009.jpeg",
+      "SourceId": "RevisaoProjetoNoticias.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\devs2blu\\CSharpMVC\\SlnRevisaoCSharpMVC2023\\src\\RevisaoProjetoNoticias.Web\\wwwroot\\",
+      "BasePath": "_content/RevisaoProjetoNoticias.Web",
+      "RelativePath": "Uploads/1_IMG-20180223-WA0009.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\1_IMG-20180223-WA0009.jpeg"
     }
   ]
 }

@@ -22,4 +22,9 @@
     <ProjectReference Include="..\RevisaoProjetoNoticias.Info.Data\RevisaoProjetoNoticias.Info.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\Uploads\" />
+  </ItemGroup>
+
 </Project>
