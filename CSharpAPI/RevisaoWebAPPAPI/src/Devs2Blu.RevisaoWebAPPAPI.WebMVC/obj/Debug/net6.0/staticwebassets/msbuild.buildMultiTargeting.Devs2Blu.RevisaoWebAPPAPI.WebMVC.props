@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Devs2Blu.RevisaoWebAPPAPI.WebMVC.props" />
+</Project>

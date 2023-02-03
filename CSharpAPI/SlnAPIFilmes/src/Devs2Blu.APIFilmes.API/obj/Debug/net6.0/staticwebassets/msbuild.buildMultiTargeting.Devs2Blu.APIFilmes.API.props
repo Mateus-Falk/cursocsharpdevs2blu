@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Devs2Blu.APIFilmes.API.props" />
+</Project>

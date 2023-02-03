@@ -1,0 +1,17 @@
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\bin\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.deps.json
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\bin\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.runtimeconfig.json
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\bin\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\bin\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.pdb
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\bin\Debug\net6.0\Devs2Blu.APIFilmes.Domain.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\bin\Debug\net6.0\Devs2Blu.APIFilmes.Domain.pdb
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.csproj.AssemblyReference.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.AssemblyInfoInputs.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.AssemblyInfo.cs
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.csproj.CoreCompileInputs.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.csproj.CopyComplete
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\refint\Devs2Blu.APIFilmes.Infra.Data.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.pdb
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\Devs2Blu.APIFilmes.Infra.Data.genruntimeconfig.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Infra.Data\obj\Debug\net6.0\ref\Devs2Blu.APIFilmes.Infra.Data.dll

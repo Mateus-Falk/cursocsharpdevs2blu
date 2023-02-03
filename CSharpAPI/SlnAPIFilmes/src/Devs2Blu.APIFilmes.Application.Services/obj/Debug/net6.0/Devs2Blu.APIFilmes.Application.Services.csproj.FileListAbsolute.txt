@@ -1,0 +1,15 @@
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\bin\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.deps.json
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\bin\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\bin\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.pdb
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.csproj.AssemblyReference.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.AssemblyInfoInputs.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.AssemblyInfo.cs
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.csproj.CoreCompileInputs.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\refint\Devs2Blu.APIFilmes.Application.Services.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.pdb
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\ref\Devs2Blu.APIFilmes.Application.Services.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\bin\Debug\net6.0\Devs2Blu.APIFilmes.Domain.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\bin\Debug\net6.0\Devs2Blu.APIFilmes.Domain.pdb
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Application.Services\obj\Debug\net6.0\Devs2Blu.APIFilmes.Application.Services.csproj.CopyComplete

@@ -1,0 +1,12 @@
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\bin\Debug\net6.0\Devs2Blu.APIFilmes.Domain.deps.json
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\bin\Debug\net6.0\Devs2Blu.APIFilmes.Domain.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\bin\Debug\net6.0\Devs2Blu.APIFilmes.Domain.pdb
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\Devs2Blu.APIFilmes.Domain.csproj.AssemblyReference.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\Devs2Blu.APIFilmes.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\Devs2Blu.APIFilmes.Domain.AssemblyInfoInputs.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\Devs2Blu.APIFilmes.Domain.AssemblyInfo.cs
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\Devs2Blu.APIFilmes.Domain.csproj.CoreCompileInputs.cache
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\Devs2Blu.APIFilmes.Domain.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\refint\Devs2Blu.APIFilmes.Domain.dll
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\Devs2Blu.APIFilmes.Domain.pdb
+C:\devs2blu\CSharpAPI\SlnAPIFilmes\src\Devs2Blu.APIFilmes.Domain\obj\Debug\net6.0\ref\Devs2Blu.APIFilmes.Domain.dll
