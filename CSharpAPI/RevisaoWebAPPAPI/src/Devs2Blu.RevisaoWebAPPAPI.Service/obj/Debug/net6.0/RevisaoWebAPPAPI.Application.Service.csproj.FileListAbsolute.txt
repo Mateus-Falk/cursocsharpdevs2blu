@@ -1,0 +1,17 @@
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\bin\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.deps.json
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\bin\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\bin\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.pdb
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.csproj.AssemblyReference.cache
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.AssemblyInfoInputs.cache
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.AssemblyInfo.cs
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.csproj.CoreCompileInputs.cache
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\refint\RevisaoWebAPPAPI.Application.Service.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.pdb
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\ref\RevisaoWebAPPAPI.Application.Service.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\bin\Debug\net6.0\RevisaoAPPAPI.Domain.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\bin\Debug\net6.0\RevisaoWebAPPAPI.Infra.Data.Repository.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\bin\Debug\net6.0\RevisaoAPPAPI.Domain.pdb
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\bin\Debug\net6.0\RevisaoWebAPPAPI.Infra.Data.Repository.pdb
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoWebAPPAPI.Service\obj\Debug\net6.0\RevisaoWebAPPAPI.Application.Service.csproj.CopyComplete

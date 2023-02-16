@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q0rLSKEoJzgFmhXf8u9BKtx353v4rmQzt8yYZKgidsRocvcdwHyS49zIiVVY5HTU7Tc1svecXTVeiF6XcYUphg==",
+  "dgSpecHash": "rrJEmSHwZdLXVWg+a7RcOjCG46i22xZHcWLLNiWXYkgBwz1YxdR4GINEGemC/d+/St7zUuHjI80L3jjjHlkpNA==",
   "success": true,
-  "projectFilePath": "C:\\devs2blu\\CSharpAPI\\RevisaoWebAPPAPI\\src\\Devs2Blu.RevisaoWebAPPAPI.Repository\\Devs2Blu.RevisaoWebAPPAPI.Repository.csproj",
+  "projectFilePath": "C:\\devs2blu\\CSharpAPI\\RevisaoWebAPPAPI\\src\\Devs2Blu.RevisaoWebAPPAPI.Repository\\RevisaoWebAPPAPI.Infra.Data.Repository.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

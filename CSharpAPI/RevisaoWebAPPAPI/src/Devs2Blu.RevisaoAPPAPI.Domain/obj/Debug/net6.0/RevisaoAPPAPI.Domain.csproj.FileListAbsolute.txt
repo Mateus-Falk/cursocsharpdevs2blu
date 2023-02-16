@@ -1,0 +1,12 @@
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\bin\Debug\net6.0\RevisaoAPPAPI.Domain.deps.json
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\bin\Debug\net6.0\RevisaoAPPAPI.Domain.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\bin\Debug\net6.0\RevisaoAPPAPI.Domain.pdb
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\RevisaoAPPAPI.Domain.csproj.AssemblyReference.cache
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\RevisaoAPPAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\RevisaoAPPAPI.Domain.AssemblyInfoInputs.cache
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\RevisaoAPPAPI.Domain.AssemblyInfo.cs
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\RevisaoAPPAPI.Domain.csproj.CoreCompileInputs.cache
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\RevisaoAPPAPI.Domain.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\refint\RevisaoAPPAPI.Domain.dll
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\RevisaoAPPAPI.Domain.pdb
+C:\devs2blu\CSharpAPI\RevisaoWebAPPAPI\src\Devs2Blu.RevisaoAPPAPI.Domain\obj\Debug\net6.0\ref\RevisaoAPPAPI.Domain.dll
