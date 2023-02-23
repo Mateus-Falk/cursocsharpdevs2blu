@@ -1,0 +1,15 @@
+<div class="row d-flex justify-content-around">
+  <div *ngFor="let item of resultsList$ | async;" class="card col-sm-3 m-3 bg-dark text-white">
+    <div class="card-header">
+      <img class="img-fluid" src="{{ item.image }}" alt="{{ item.name }}">
+    </div>
+    <div class="card-body">
+      <div class="card-title">{{ item.name }}</div>
+      <ul class="list-group">
+        <li class="list-group-item bg-danger">{{ item.gender }}</li>
+        <li class="list-group-item bg-danger">{{ item.species }}</li>
+        <li class="list-group-item bg-danger">{{ item.status }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
