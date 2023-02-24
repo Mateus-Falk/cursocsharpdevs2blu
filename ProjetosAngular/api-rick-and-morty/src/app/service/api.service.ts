@@ -1,3 +1,4 @@
+import { Character } from './../models/api/character-model';
 import { ApiReturn } from './../models/api-return/api-return';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -13,5 +14,9 @@ export class ApiService {
 
   getCharacterList(){
     return this.http.get<ApiReturn>(this.URL_API);
+  }
+
+  getCharacterById(id: string){
+    return this.http.get<Character>(`${this.URL_API}/${id}`)
   }
 }

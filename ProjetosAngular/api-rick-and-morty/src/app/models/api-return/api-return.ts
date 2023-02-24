@@ -7,11 +7,8 @@ export class ApiReturn {
 }
 
 export class Results{
-  id?: Int16Array;
+  id?: string;
   name?: string;
-  status?: string;
-  species?: string;
-  gender?: string;
   image?: string;
 
   constructor(obj: Partial<ApiReturn>){

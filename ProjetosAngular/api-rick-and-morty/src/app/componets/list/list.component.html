@@ -5,11 +5,7 @@
     </div>
     <div class="card-body">
       <h4 class="card-title">{{ item.name }}</h4>
-      <ul class="list-group">
-        <li class="list-group-item bg-danger">{{ item.gender }}</li>
-        <li class="list-group-item bg-danger">{{ item.species }}</li>
-        <li class="list-group-item bg-danger">{{ item.status }}</li>
-      </ul>
+      <a routerLink="/detail/{{item.id}}" class="btn btn-primary">Go {{ item.name }}</a>
     </div>
   </div>
 </div>
