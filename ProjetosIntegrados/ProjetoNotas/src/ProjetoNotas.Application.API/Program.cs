@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 
 // Context SQL Server
 builder.Services.AddDbContext<SQLServerContext>
-   (options => options.UseSqlServer("Server=DESKTOP-UME51NM\\SQLMATEUS;Database=ProjetoNotas;User Id=sa;Password=zuky;TrustServerCertificate=True;Encrypt=False;"));
+	(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection")));
 
 // Dependency Injection
 // Repositories
@@ -26,6 +26,17 @@ builder.Services.AddScoped<INoteRepository,NoteRepository>();
 builder.Services.AddScoped<IUserService,UserService>();
 builder.Services.AddScoped<INoteService,NoteService>();
 
+builder.Services.AddCors(
+	options =>
+	{
+		options.AddPolicy(name: "NoteCors",
+			builder =>
+			{
+				builder.WithOrigins("*");
+			});
+	});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -34,6 +45,8 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
+
+app.UseCors("NoteCors");
 
 app.UseHttpsRedirection();
 

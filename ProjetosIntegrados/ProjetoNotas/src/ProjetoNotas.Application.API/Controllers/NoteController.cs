@@ -6,7 +6,7 @@ namespace ProjetoNotas.Application.API.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	public class NoteController : ControllerBase
+	public class NoteController : Controller
 	{
 		private readonly INoteService _service;
 		public NoteController(INoteService service)
@@ -15,15 +15,15 @@ namespace ProjetoNotas.Application.API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<ActionResult<IEnumerable<NoteDTO>>> GetNotes()
+		public async Task<JsonResult> GetNotes()
 		{
-			return _service.FindAll();
+			return Json(_service.FindAll());
 		}
 		
 		[HttpGet("{id}")]
-		public async Task<ActionResult<NoteDTO>> GetNote(int id)
+		public async Task<JsonResult> GetNote(int id)
 		{
-			return await _service.FindById(id);
+			return Json(_service.FindAll().FirstOrDefault(n => n.id == id));
 		}
 
 		[HttpPut("{id}")]

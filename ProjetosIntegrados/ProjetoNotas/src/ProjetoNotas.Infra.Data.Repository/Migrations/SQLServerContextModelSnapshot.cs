@@ -80,6 +80,15 @@ namespace ProjetoNotas.Infra.Data.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Login = "tuca",
+                            Name = "Tuca",
+                            Password = "123456"
+                        });
                 });
 
             modelBuilder.Entity("ProjetoNotas.Domain.Entities.Note", b =>

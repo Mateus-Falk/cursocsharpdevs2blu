@@ -1,3 +1,4 @@
+C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\appsettings.Development.json
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\appsettings.json
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\ProjetoNotas.Application.API.exe
@@ -41,7 +42,6 @@ C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\Mono.TextTemplating.dll
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\System.CodeDom.dll
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\devs2blu\ProjetosIntegrados\ProjetoNotas\src\ProjetoNotas.Application.API\bin\Debug\net6.0\System.Drawing.Common.dll

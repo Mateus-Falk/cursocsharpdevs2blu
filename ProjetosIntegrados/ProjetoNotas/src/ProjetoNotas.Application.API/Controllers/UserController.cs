@@ -6,7 +6,7 @@ namespace ProjetoNotas.Application.API.Controllers
 {
 	[Route("api/[controller]")]
 	[ApiController]
-	public class UserController : ControllerBase
+	public class UserController : Controller
 	{
 		private readonly IUserService _service;
 		public UserController(IUserService service)
@@ -15,15 +15,15 @@ namespace ProjetoNotas.Application.API.Controllers
 		}
 
 		[HttpGet]
-		public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
+		public async Task<JsonResult> GetUsers()
 		{
-			return _service.FindAll();
+			return Json(_service.FindAll());
 		}
 
 		[HttpGet("{id}")]
-		public async Task<ActionResult<UserDTO>> GetUser(int id)
+		public async Task<JsonResult> GetUser(int id)
 		{
-			return await _service.FindById(id);
+			return Json(_service.FindAll().FirstOrDefault(u => u.id == id));
 		}
 
 		[HttpPut("{id}")]

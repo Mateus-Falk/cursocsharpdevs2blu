@@ -23,11 +23,10 @@ namespace ProjetoNotas.Infra.Data.Repository.Repositories
 			return this._context.SaveChangesAsync();
 		}
 
-		public List<T> FindAll()
+		public IQueryable<T> FindAll()
 		{
 			return this._context
-					.Set<T>()
-					.ToList();
+					.Set<T>();
 		}
 
 		public async Task<T> FindById(int id)
